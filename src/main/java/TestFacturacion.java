@@ -78,12 +78,13 @@ public class TestFacturacion {
     }
 
     public static void dardealtallamada() {
-        System.out.println("Numero llamado: ");
+        System.out.print("Numero llamado: ");
         String num_llamado = sc.nextLine();
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
-        System.out.println("Introducir tiempo llamada: ");
+        System.out.print("Introducir tiempo llamada: ");
         double tiempo_llamada = sc.nextDouble();
         Llamadas llamada = new Llamadas(num_llamado, fecha, fecha.getTime(), tiempo_llamada);
+        sc.nextLine();
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();
         listaclientes.get(nif_cliente).añadirllamada(llamada);
@@ -92,7 +93,9 @@ public class TestFacturacion {
     public static void listadoallamadas() {
         System.out.print("Introduce el NIF del cliente: ");
         String nif = sc.nextLine();
-        listaclientes.get(nif).mostrarllamadas();
+        for (Llamadas llamadas : listaclientes.get(nif).mostrarllamadas()) {
+            System.out.println(llamadas.toString());
+        }
     }
 
     public static void datoscliente() {
@@ -130,7 +133,7 @@ public class TestFacturacion {
         System.out.println("6. Cambiar Tarifa.");
         System.out.println("7. Dar de alta llamada.");
         System.out.println("8. Listado de llamadas de un cliente.");
-        System.out.println(". Salir.");
+        System.out.println("9. Salir.");
     }
 
     public static int askoption() {

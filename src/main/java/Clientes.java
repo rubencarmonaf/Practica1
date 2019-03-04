@@ -25,7 +25,7 @@ public class Clientes {
         Listallamadas.add(llamada);
     }
 
-    public List mostrarllamadas(){
+    public List<Llamadas> mostrarllamadas(){
         return Listallamadas;
     }
 
