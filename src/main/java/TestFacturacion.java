@@ -43,6 +43,12 @@ public class TestFacturacion {
                     listadoallamadas();
                     break;
                 case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
                     salir = true;
                     break;
             }
@@ -133,7 +139,10 @@ public class TestFacturacion {
         System.out.println("6. Cambiar Tarifa.");
         System.out.println("7. Dar de alta llamada.");
         System.out.println("8. Listado de llamadas de un cliente.");
-        System.out.println("9. Salir.");
+        System.out.println("9. Emitir factura.");
+        System.out.println("10. Recuperar datos de una factura.");
+        System.out.println("11. Recuperar facturas cliente.");
+        System.out.println("12. Salir.");
     }
 
     public static int askoption() {
