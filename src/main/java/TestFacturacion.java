@@ -1,4 +1,3 @@
-import java.time.LocalTime;
 import java.util.*;
 
 import es.uji.www.GeneradorDatosINE;
@@ -82,12 +81,10 @@ public class TestFacturacion {
         System.out.println("Numero llamado: ");
         String num_llamado = sc.nextLine();
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
-        LocalTime hora_llamada = LocalTime.ofSecondOfDay(60);
-        Llamadas llamada = new Llamadas(num_llamado, fecha, hora_llamada, 1);
+        Llamadas llamada = new Llamadas(num_llamado, fecha, fecha.getTime(), 1);
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();
         listaclientes.get(nif_cliente).añadirllamada(llamada);
-
     }
 
     public static void listadoallamadas() {
