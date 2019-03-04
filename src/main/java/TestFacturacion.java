@@ -128,6 +128,8 @@ public class TestFacturacion {
         System.out.println("4. Mostrar clietntes.");
         System.out.println("5. Datos clietntes.");
         System.out.println("6. Cambiar Tarifa.");
+        System.out.println("7. Dar de alta llamada.");
+        System.out.println("8. Listado de llamadas de un cliente.");
         System.out.println(". Salir.");
     }
 
