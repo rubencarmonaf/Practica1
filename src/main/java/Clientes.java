@@ -11,6 +11,7 @@ public class Clientes {
     protected Calendar fecha_alta;
     protected Tarifa tarifa;
     protected List<Llamadas> Listallamadas = new ArrayList<>();
+    protected List<Facturas> Listafacturas = new ArrayList<>();
 
     public Clientes(String nombre, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         this.nombre = nombre;

@@ -43,6 +43,7 @@ public class TestFacturacion {
                     listadoallamadas();
                     break;
                 case 9:
+                    emitirfactura();
                     break;
                 case 10:
                     break;
@@ -62,16 +63,25 @@ public class TestFacturacion {
     }
 
     public static void cambiartarifa() {
-        System.out.print("Introduce el NIF del cliente: ");
-        String nif = sc.nextLine();
+        String nif = getnif();
         System.out.print("Introduce la nueva tarifa: ");
         double tarifa = sc.nextDouble();
         listaclientes.get(nif).tarifa.setEuromin(tarifa);
     }
 
+    public static void emitirfactura() {
+        String nif = getnif();
+        double tiempo_tot = 0;
+        double tarifa = listaclientes.get(nif).tarifa.getEuromin();
+        for (Llamadas llamadas : listaclientes.get(nif).mostrarllamadas()) {
+            tiempo_tot += llamadas.getDuracion_llamada();
+        }
+        double tot_factura = tiempo_tot * tarifa;
+
+    }
+
     public static void borrarcliente() {
-        System.out.print("Introdcue el NIF del cliente: ");
-        String nif = sc.nextLine();
+        String nif = getnif();
         listaclientes.remove(nif);
         int index = -1;
         for (int i = 0; i < auxlistaclientes.size(); i++) {
@@ -97,16 +107,14 @@ public class TestFacturacion {
     }
 
     public static void listadoallamadas() {
-        System.out.print("Introduce el NIF del cliente: ");
-        String nif = sc.nextLine();
+        String nif = getnif();
         for (Llamadas llamadas : listaclientes.get(nif).mostrarllamadas()) {
             System.out.println(llamadas.toString());
         }
     }
 
     public static void datoscliente() {
-        System.out.print("Introduce el NIF del cliente: ");
-        String nif = sc.nextLine();
+        String nif = getnif();
         listaclientes.get(nif).toString();
     }
 
@@ -150,5 +158,11 @@ public class TestFacturacion {
         int accion = sc.nextInt();
         sc.nextLine();
         return accion;
+    }
+
+    public static String getnif(){
+        System.out.print("Introduce el NIF del cliente: ");
+        String nif = sc.nextLine();
+        return nif;
     }
 }
