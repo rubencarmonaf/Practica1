@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 
 public class Clientes {
@@ -11,7 +12,7 @@ public class Clientes {
     protected Calendar fecha_alta;
     protected Tarifa tarifa;
     protected List<Llamadas> Listallamadas = new ArrayList<>();
-    protected List<Facturas> Listafacturas = new ArrayList<>();
+    protected HashMap<Integer, Facturas> Listafacturas = new HashMap<>();
 
     public Clientes(String nombre, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         this.nombre = nombre;
@@ -30,11 +31,11 @@ public class Clientes {
         return Listallamadas;
     }
 
-    public void añadrifactura(Facturas factura) {
-        Listafacturas.add(factura);
+    public void añadrifactura(int codigo, Facturas factura) {
+        Listafacturas.put(codigo, factura);
     }
 
-    public List<Facturas> mostrarfacturas(){
+    public HashMap<Integer, Facturas> mostrarfacturas(){
         return Listafacturas;
     }
 
