@@ -93,9 +93,16 @@ public class TestFacturacion {
 
     public static void datosfactura() {
         String nif = getnif();
-        System.out.println("Código Factura: ");
+        System.out.print("Código Factura: ");
         int codigo =  sc.nextInt();
         System.out.println(listaclientes.get(nif).Listafacturas.get(codigo).toString());
+    }
+
+    public static void mostrarfacturas() {
+        String nif = getnif();
+        for (int codigo : listaclientes.get(nif).mostrarfacturas().keySet()) {
+            System.out.println(listaclientes.get(nif).mostrarfacturas().get(codigo).toString());
+        }
     }
 
     public static void borrarcliente() {
@@ -133,7 +140,7 @@ public class TestFacturacion {
 
     public static void datoscliente() {
         String nif = getnif();
-        listaclientes.get(nif).toString();
+        System.out.println(listaclientes.get(nif).toString());
     }
 
     public static void crearParticular() {
@@ -161,7 +168,7 @@ public class TestFacturacion {
         System.out.println("2. Crear cliente Empresa.");
         System.out.println("3. Borrar cliente.");
         System.out.println("4. Mostrar clietntes.");
-        System.out.println("5. Datos clietntes.");
+        System.out.println("5. Datos clietnte.");
         System.out.println("6. Cambiar Tarifa.");
         System.out.println("7. Dar de alta llamada.");
         System.out.println("8. Listado de llamadas de un cliente.");
@@ -175,6 +182,7 @@ public class TestFacturacion {
         System.out.print("Que acción quieres realizar: ");
         int accion = sc.nextInt();
         sc.nextLine();
+        System.out.println();
         return accion;
     }
 
