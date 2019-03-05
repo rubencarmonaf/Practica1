@@ -1,14 +1,16 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Calendar;
 
 public class Facturas {
 
     private int codigo;
     private Tarifa tarifa;
-    private Calendar fecha_emision;
-    private Calendar fecha_facturacion;
+    private LocalDate fecha_emision;
+    private LocalDateTime [] fecha_facturacion;
     private double importe;
 
-    public Facturas(int codigo, Tarifa tarifa, Calendar fecha_emision, Calendar fecha_facturacion, double importe) {
+    public Facturas(int codigo, Tarifa tarifa, LocalDate fecha_emision, LocalDateTime [] fecha_facturacion, double importe) {
         this.codigo = codigo;
         this.tarifa = tarifa;
         this.fecha_emision = fecha_emision;
@@ -16,7 +18,7 @@ public class Facturas {
         this.importe = importe;
     }
 
-    public Calendar getFecha() {
+    public LocalDate getFecha() {
         return fecha_emision;
     }
 
@@ -28,7 +30,7 @@ public class Facturas {
         return tarifa;
     }
 
-    public Calendar getFecha_facturacion() {
+    public LocalDateTime [] getFecha_facturacion() {
         return fecha_facturacion;
     }
 
@@ -44,11 +46,11 @@ public class Facturas {
         this.tarifa = tarifa;
     }
 
-    public void setFecha_emision(Calendar fecha_emision) {
+    public void setFecha_emision(LocalDate fecha_emision) {
         this.fecha_emision = fecha_emision;
     }
 
-    public void setFecha_facturacion(Calendar fecha_facturacion) {
+    public void setFecha_facturacion(LocalDateTime [] fecha_facturacion) {
         this.fecha_facturacion = fecha_facturacion;
     }
 

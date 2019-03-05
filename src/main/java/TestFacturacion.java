@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 import es.uji.www.GeneradorDatosINE;
@@ -77,7 +79,14 @@ public class TestFacturacion {
             tiempo_tot += llamadas.getDuracion_llamada();
         }
         double tot_factura = tiempo_tot * tarifa;
-
+        System.out.println("Código Factura: ");
+        int codigo =  sc.nextInt();
+        LocalDate fecha_emision = LocalDate.now();
+        LocalDateTime mes_ini = LocalDateTime.now();
+        LocalDateTime mes_fin = LocalDateTime.now();
+        LocalDateTime [] facturacion = {mes_ini, mes_fin};
+        Facturas factura = new Facturas(codigo, listaclientes.get(nif).tarifa, fecha_emision, facturacion, tot_factura);
+        listaclientes.get(nif).añadrifactura(factura);
     }
 
     public static void borrarcliente() {

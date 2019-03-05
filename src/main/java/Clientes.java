@@ -30,6 +30,14 @@ public class Clientes {
         return Listallamadas;
     }
 
+    public void añadrifactura(Facturas factura) {
+        Listafacturas.add(factura);
+    }
+
+    public List<Facturas> mostrarfacturas(){
+        return Listafacturas;
+    }
+
     public Calendar getFecha() {
         return fecha_alta;
     }
