@@ -7,8 +7,6 @@ import es.uji.www.GeneradorDatosINE;
 public class TestFacturacion {
     static HashMap<String, Clientes> listaclientes = new HashMap<>();
     static List<Clientes> auxlistaclientes = new ArrayList<>();
-
-    static HashMap<String, Facturas> facturas = new HashMap<>();
     static Scanner sc = new Scanner(System.in);
     static GeneradorDatosINE generador = new GeneradorDatosINE();
 
@@ -51,6 +49,7 @@ public class TestFacturacion {
                     datosfactura();
                     break;
                 case 11:
+                    mostrarfacturas();
                     break;
                 case 12:
                     salir = true;
@@ -63,6 +62,7 @@ public class TestFacturacion {
         for(int i=0;i<auxlistaclientes.size();i++){
             System.out.println(auxlistaclientes.get(i).toString());
         }
+        System.out.println();
     }
 
     public static void cambiartarifa() {
@@ -80,7 +80,7 @@ public class TestFacturacion {
             tiempo_tot += llamadas.getDuracion_llamada();
         }
         double tot_factura = tiempo_tot * tarifa;
-        System.out.println("Código Factura: ");
+        System.out.print("Código Factura: ");
         int codigo =  sc.nextInt();
         LocalDate fecha_emision = LocalDate.now();
         //Cambiar fecha fin facturación
@@ -89,6 +89,7 @@ public class TestFacturacion {
         LocalDateTime [] facturacion = {mes_ini, mes_fin};
         Facturas factura = new Facturas(codigo, listaclientes.get(nif).tarifa, fecha_emision, facturacion, tot_factura);
         listaclientes.get(nif).añadrifactura(codigo, factura);
+        System.out.println();
     }
 
     public static void datosfactura() {
@@ -96,6 +97,7 @@ public class TestFacturacion {
         System.out.print("Código Factura: ");
         int codigo =  sc.nextInt();
         System.out.println(listaclientes.get(nif).Listafacturas.get(codigo).toString());
+        System.out.println();
     }
 
     public static void mostrarfacturas() {
@@ -103,6 +105,7 @@ public class TestFacturacion {
         for (int codigo : listaclientes.get(nif).mostrarfacturas().keySet()) {
             System.out.println(listaclientes.get(nif).mostrarfacturas().get(codigo).toString());
         }
+        System.out.println();
     }
 
     public static void borrarcliente() {
@@ -116,6 +119,7 @@ public class TestFacturacion {
                 break;
             }
         }
+        System.out.println();
     }
 
     public static void dardealtallamada() {
@@ -129,6 +133,7 @@ public class TestFacturacion {
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();
         listaclientes.get(nif_cliente).añadirllamada(llamada);
+        System.out.println();
     }
 
     public static void listadoallamadas() {
@@ -136,11 +141,13 @@ public class TestFacturacion {
         for (Llamadas llamadas : listaclientes.get(nif).mostrarllamadas()) {
             System.out.println(llamadas.toString());
         }
+        System.out.println();
     }
 
     public static void datoscliente() {
         String nif = getnif();
         System.out.println(listaclientes.get(nif).toString());
+        System.out.println();
     }
 
     public static void crearParticular() {
