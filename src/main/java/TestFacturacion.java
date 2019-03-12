@@ -88,7 +88,7 @@ public class TestFacturacion {
         LocalDateTime mes_fin = LocalDateTime.now();
         LocalDateTime [] facturacion = {mes_ini, mes_fin};
         Facturas factura = new Facturas(codigo, listaclientes.get(nif).tarifa, fecha_emision, facturacion, tot_factura);
-        listaclientes.get(nif).añadrifactura(codigo, factura);
+        listaclientes.get(nif).anadrifactura(codigo, factura);
         System.out.println();
     }
 
@@ -132,7 +132,7 @@ public class TestFacturacion {
         sc.nextLine();
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();
-        listaclientes.get(nif_cliente).añadirllamada(llamada);
+        listaclientes.get(nif_cliente).anadirllamada(llamada);
         System.out.println();
     }
 

@@ -23,7 +23,7 @@ public class Clientes {
         this.tarifa = tarifa;
     }
 
-    public void añadirllamada(Llamadas llamada) {
+    public void anadirllamada(Llamadas llamada) {
         Listallamadas.add(llamada);
     }
 
@@ -31,7 +31,7 @@ public class Clientes {
         return Listallamadas;
     }
 
-    public void añadrifactura(int codigo, Facturas factura) {
+    public void anadrifactura(int codigo, Facturas factura) {
         Listafacturas.put(codigo, factura);
     }
 
