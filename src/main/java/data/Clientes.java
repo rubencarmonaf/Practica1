@@ -1,18 +1,21 @@
+package data;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import utilities.*;
 
 public class Clientes {
 
-    protected String nombre;
-    protected String NIF;
-    protected Direcciones direccion;
-    protected String correo_electronico;
-    protected Calendar fecha_alta;
-    protected Tarifa tarifa;
-    protected List<Llamadas> Listallamadas = new ArrayList<>();
-    protected HashMap<Integer, Facturas> Listafacturas = new HashMap<>();
+    public String nombre;
+    public String NIF;
+    public Direcciones direccion;
+    public String correo_electronico;
+    public Calendar fecha_alta;
+    public Tarifa tarifa;
+    public List<Llamadas> Listallamadas = new ArrayList<>();
+    public HashMap<Integer, Facturas> Listafacturas = new HashMap<>();
 
     public Clientes(String nombre, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         this.nombre = nombre;
@@ -89,7 +92,7 @@ public class Clientes {
 
     @Override
     public String toString() {
-        return "Clientes{" +
+        return "data.Clientes{" +
                 "nombre='" + nombre + '\'' +
                 ", NIF='" + NIF + '\'' +
                 ", direccion=" + direccion +

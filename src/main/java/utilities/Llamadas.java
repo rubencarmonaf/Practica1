@@ -1,3 +1,5 @@
+package utilities;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -49,7 +51,7 @@ public class Llamadas {
 
     @Override
     public String toString() {
-        return "Llamadas{" +
+        return "utilities.Llamadas{" +
                 "numero_llamado='" + numero_llamado + '\'' +
                 ", fecha_llamada=" + fecha_llamada +
                 ", hora_llamada='" + hora_llamada + '\'' +

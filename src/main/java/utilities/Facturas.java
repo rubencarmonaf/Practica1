@@ -1,6 +1,7 @@
+package utilities;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Calendar;
 
 public class Facturas {
 
@@ -60,7 +61,7 @@ public class Facturas {
 
     @Override
     public String toString() {
-        return "Facturas{" +
+        return "utilities.Facturas{" +
                 "codigo=" + codigo +
                 ", tarifa=" + tarifa +
                 ", fecha_emision=" + fecha_emision +
