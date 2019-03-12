@@ -1,3 +1,5 @@
+package utilities;
+
 public class Direcciones {
 
     private String codigo_postal;
@@ -36,7 +38,7 @@ public class Direcciones {
 
     @Override
     public String toString() {
-        return "Direcciones{" +
+        return "utilities.Direcciones{" +
                 "codigo_postal='" + codigo_postal + '\'' +
                 ", provincia='" + provincia + '\'' +
                 ", poblacion='" + poblacion + '\'' +

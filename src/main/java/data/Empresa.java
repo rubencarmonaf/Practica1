@@ -1,3 +1,6 @@
+package data;
+
+import utilities.*;
 import java.util.Calendar;
 
 public class Empresa extends Clientes {
@@ -8,7 +11,7 @@ public class Empresa extends Clientes {
 
     @Override
     public String toString() {
-        return "Empresa{" +
+        return "data.Empresa{" +
                 "nombre='" + nombre + '\'' +
                 ", NIF='" + NIF + '\'' +
                 ", direccion=" + direccion +

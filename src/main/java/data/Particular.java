@@ -1,8 +1,11 @@
+package data;
+
+import utilities.*;
 import java.util.Calendar;
 
 public class Particular extends Clientes {
 
-    private String apellidos;
+    public String apellidos;
 
     public Particular(String nombre, String apellidos, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         super(nombre, NIF, direccion, correo_electronico, fecha_alta, tarifa);
@@ -19,7 +22,7 @@ public class Particular extends Clientes {
 
     @Override
     public String toString() {
-        return "Particular{" +
+        return "data.Particular{" +
                 "apellidos='" + apellidos + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", NIF='" + NIF + '\'' +

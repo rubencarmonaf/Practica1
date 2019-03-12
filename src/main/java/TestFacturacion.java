@@ -1,8 +1,14 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
-
+import data.Clientes;
+import data.Empresa;
+import data.Particular;
 import es.uji.www.GeneradorDatosINE;
+import utilities.Direcciones;
+import utilities.Facturas;
+import utilities.Llamadas;
+import utilities.Tarifa;
 
 public class TestFacturacion {
     static HashMap<String, Clientes> listaclientes = new HashMap<>();
@@ -171,12 +177,12 @@ public class TestFacturacion {
     }
 
     public static void showmenu() {
-        System.out.println("1. Crear cliente Particular.");
-        System.out.println("2. Crear cliente Empresa.");
+        System.out.println("1. Crear cliente data.Particular.");
+        System.out.println("2. Crear cliente data.Empresa.");
         System.out.println("3. Borrar cliente.");
         System.out.println("4. Mostrar clietntes.");
         System.out.println("5. Datos clietnte.");
-        System.out.println("6. Cambiar Tarifa.");
+        System.out.println("6. Cambiar utilities.Tarifa.");
         System.out.println("7. Dar de alta llamada.");
         System.out.println("8. Listado de llamadas de un cliente.");
         System.out.println("9. Emitir factura.");

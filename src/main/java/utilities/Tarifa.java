@@ -1,3 +1,5 @@
+package utilities;
+
 public class Tarifa {
     private double euromin;
 
@@ -15,7 +17,7 @@ public class Tarifa {
 
     @Override
     public String toString() {
-        return "Tarifa{" +
+        return "utilities.Tarifa{" +
                 "euromin=" + euromin +
                 '}';
     }
