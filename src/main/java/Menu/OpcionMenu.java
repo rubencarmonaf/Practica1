@@ -3,25 +3,26 @@ package Menu;
 import Clientes.Cartera;
 
 public enum OpcionMenu {
-    SALIR("Salir", new Salir()),
-    NUEVO_PARTICULAR("Nuevo particular", new NuevoParticular()),
-    NUEVA_EMPRESA("Nueva empresa", new NuevaEmpresa()),
-    NUEVA_LLAMADA("Nueva llamada", new NuevaLlamada()),
-    NUEVA_FACTURA("Nueva Factura", new NuevaFactura()),
-    BORRAR_CLIENTE("Borrar cliente", new BorrarClientes()),
-    BUSCAR_CLIENTE("Buscar cliente", new BuscarClientes()),
-    DATOS_CLIENE("Datos cliente", new DatosCliente()),
-    CAMBIAR_TARIFA("Cambiar tarifa", new CambiarTarifa()),
-    DATOS_FACTURA("Datos factura", new DatosFactura()),
-    LISTADO_LLAMADAS("Listado llamadas", new ListadoLlamadas()),
-    MOSTRAR_FACTURA("Mostrar factura", new MostrarFactura());
+    SALIR("Salir"),
+    NUEVO_PARTICULAR("Nuevo particular"),
+    NUEVA_EMPRESA("Nueva empresa"),
+    NUEVA_LLAMADA("Nueva llamada"),
+    NUEVA_FACTURA("Nueva Factura"),
+    BORRAR_CLIENTE("Borrar cliente"),
+    BUSCAR_CLIENTE("Buscar cliente"),
+    DATOS_CLIENTE("Datos cliente"),
+    CAMBIAR_TARIFA("Cambiar tarifa"),
+    DATOS_FACTURA("Datos factura"),
+    LISTADO_LLAMADAS("Listado llamadas"),
+    MOSTRAR_FACTURA("Mostrar factura"),
+    BETWEEN_ALTA_CLIENTE("Consultar  listado de clientes que fueron dados de alta entre dos fechas"),
+    BETWEEN_LLAMADAS("Consultar listado de llamadas de un cliente que fueron realizadas entre dos fechas"),
+    BETWEEN_FACTURAS("Consultar listado de facturas de un cliente emitidas entre dos fechas");
 
     private String descripcion;
-    private EjecutaOpcion ejecutaOpcion;
 
-    OpcionMenu(String descripcion, EjecutaOpcion ejecutaOpcion) {
+    OpcionMenu(String descripcion) {
         this.descripcion = descripcion;
-        this.ejecutaOpcion = ejecutaOpcion;
     }
 
     public static String menu() {
@@ -35,11 +36,7 @@ public enum OpcionMenu {
         return sb.toString();
     }
 
-    public static OpcionMenu filtraOpcion(int posicion) {
-        return values()[posicion];
-    }
-
-    public void ejecuta(Cartera cartera) {
-        ejecutaOpcion.ejecuta(cartera);
+    public static OpcionMenu obtenerOpcion(int posicion) {
+        return values()[posicion - 1];
     }
 }
