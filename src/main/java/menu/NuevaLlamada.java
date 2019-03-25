@@ -1,12 +1,12 @@
 package menu;
 
-import data.Cartera;
-import utilities.Llamadas;
+import Clientes.Cartera;
+import Llamadas.Llamada;
 
 import java.util.Calendar;
 import java.util.Locale;
 
-import static data.Cartera.sc;
+import static Clientes.Cartera.sc;
 
 public class NuevaLlamada implements EjecutaOpcion {
     @Override
@@ -16,7 +16,7 @@ public class NuevaLlamada implements EjecutaOpcion {
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
         System.out.print("Introducir tiempo llamada: ");
         double tiempo_llamada = sc.nextDouble();
-        Llamadas llamada = new Llamadas(num_llamado, fecha, fecha.getTime(), tiempo_llamada);
+        Llamada llamada = new Llamada(num_llamado, fecha, fecha.getTime(), tiempo_llamada);
         sc.nextLine();
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();

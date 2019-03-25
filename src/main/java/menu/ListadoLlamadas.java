@@ -1,17 +1,17 @@
 package menu;
 
-import data.Cartera;
-import utilities.Llamadas;
+import Clientes.Cartera;
+import Llamadas.Llamada;
 
-import static data.Cartera.sc;
+import static Clientes.Cartera.sc;
 
 public class ListadoLlamadas implements EjecutaOpcion {
     @Override
     public void ejecuta(Cartera cartera) {
         System.out.print("Introduce el NIF del cliente: ");
         String nif = sc.nextLine();
-        for (Llamadas llamadas : Cartera.listaclientes.get(nif).mostrarllamadas()) {
-            System.out.println(llamadas.toString());
+        for (Llamada llamada : Cartera.listaclientes.get(nif).mostrarllamadas()) {
+            System.out.println(llamada.toString());
         }
         System.out.println();
     }

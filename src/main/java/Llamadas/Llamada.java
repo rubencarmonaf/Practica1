@@ -1,16 +1,17 @@
-package utilities;
+package Llamadas;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Llamadas {
+public class Llamada implements Serializable {
 
     private String numero_llamado;
     private Calendar fecha_llamada;
     private Date hora_llamada;
     private double duracion_llamada;
 
-    public Llamadas(String numero_llamado, Calendar fecha_llamada, Date hora_llamada, double duracion_llamada) {
+    public Llamada(String numero_llamado, Calendar fecha_llamada, Date hora_llamada, double duracion_llamada) {
         this.numero_llamado = numero_llamado;
         this.fecha_llamada = fecha_llamada;
         this.hora_llamada = hora_llamada;
@@ -51,7 +52,7 @@ public class Llamadas {
 
     @Override
     public String toString() {
-        return "utilities.Llamadas{" +
+        return "Llamadas.Llamada{" +
                 "numero_llamado='" + numero_llamado + '\'' +
                 ", fecha_llamada=" + fecha_llamada +
                 ", hora_llamada='" + hora_llamada + '\'' +

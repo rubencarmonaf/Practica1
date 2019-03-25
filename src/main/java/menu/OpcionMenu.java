@@ -1,6 +1,6 @@
 package menu;
 
-import data.Cartera;
+import Clientes.Cartera;
 
 public enum OpcionMenu {
     SALIR("Salir", new Salir()),

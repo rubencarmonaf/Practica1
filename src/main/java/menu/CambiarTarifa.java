@@ -1,8 +1,8 @@
 package menu;
 
-import data.Cartera;
+import Clientes.Cartera;
 
-import static data.Cartera.sc;
+import static Clientes.Cartera.sc;
 
 public class CambiarTarifa implements EjecutaOpcion {
     @Override

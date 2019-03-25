@@ -1,13 +1,15 @@
-package data;
+package Clientes;
 
-import utilities.*;
+import Tarifas.Tarifa;
+
 import java.util.Calendar;
+import java.io.Serializable;
 
-public class Particular extends Clientes {
+public class Particular extends Cliente implements Serializable{
 
-    public String apellidos;
+    private String apellidos;
 
-    public Particular(String nombre, String apellidos, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
+    public Particular(String nombre, String apellidos, String NIF, Direccion direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         super(nombre, NIF, direccion, correo_electronico, fecha_alta, tarifa);
         this.apellidos = apellidos;
     }
@@ -22,7 +24,7 @@ public class Particular extends Clientes {
 
     @Override
     public String toString() {
-        return "data.Particular{" +
+        return "Particular{" +
                 "apellidos='" + apellidos + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", NIF='" + NIF + '\'' +

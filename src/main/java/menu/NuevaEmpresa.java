@@ -1,18 +1,18 @@
 package menu;
 
-import data.Cartera;
-import data.Empresa;
-import utilities.Direcciones;
-import utilities.Tarifa;
+import Clientes.Cartera;
+import Clientes.Direccion;
+import Clientes.Empresa;
+import Tarifas.Tarifa;
 
 import java.util.Calendar;
 
-import static data.Cartera.generador;
+import static Clientes.Cartera.generador;
 
 public class NuevaEmpresa implements EjecutaOpcion {
     @Override
     public void ejecuta(Cartera cartera) {
-        Direcciones dir = new Direcciones("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
+        Direccion dir = new Direccion("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
         Calendar today = Calendar.getInstance();
         Tarifa tar = new Tarifa(12);
         String nif = generador.getNIF();

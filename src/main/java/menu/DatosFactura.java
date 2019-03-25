@@ -1,7 +1,7 @@
 package menu;
 
-import data.Cartera;
-import static data.Cartera.sc;
+import Clientes.Cartera;
+import static Clientes.Cartera.sc;
 
 
 public class DatosFactura implements EjecutaOpcion {

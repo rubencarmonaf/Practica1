@@ -1,17 +1,19 @@
-package utilities;
+package Facturas;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import Tarifas.Tarifa;
 
-public class Facturas {
+import java.io.Serializable;
+import java.util.Calendar;
+
+public class Factura implements Serializable {
 
     private int codigo;
     private Tarifa tarifa;
-    private LocalDate fecha_emision;
-    private LocalDateTime [] fecha_facturacion;
+    private Calendar fecha_emision;
+    private Calendar [] fecha_facturacion;
     private double importe;
 
-    public Facturas(int codigo, Tarifa tarifa, LocalDate fecha_emision, LocalDateTime [] fecha_facturacion, double importe) {
+    public Factura(int codigo, Tarifa tarifa, Calendar fecha_emision, Calendar [] fecha_facturacion, double importe) {
         this.codigo = codigo;
         this.tarifa = tarifa;
         this.fecha_emision = fecha_emision;
@@ -19,7 +21,7 @@ public class Facturas {
         this.importe = importe;
     }
 
-    public LocalDate getFecha() {
+    public Calendar getFecha() {
         return fecha_emision;
     }
 
@@ -31,7 +33,7 @@ public class Facturas {
         return tarifa;
     }
 
-    public LocalDateTime [] getFecha_facturacion() {
+    public Calendar [] getFecha_facturacion() {
         return fecha_facturacion;
     }
 
@@ -47,11 +49,11 @@ public class Facturas {
         this.tarifa = tarifa;
     }
 
-    public void setFecha_emision(LocalDate fecha_emision) {
+    public void setFecha_emision(Calendar fecha_emision) {
         this.fecha_emision = fecha_emision;
     }
 
-    public void setFecha_facturacion(LocalDateTime [] fecha_facturacion) {
+    public void setFecha_facturacion(Calendar [] fecha_facturacion) {
         this.fecha_facturacion = fecha_facturacion;
     }
 
@@ -61,7 +63,7 @@ public class Facturas {
 
     @Override
     public String toString() {
-        return "utilities.Facturas{" +
+        return "Facturas.Factura{" +
                 "codigo=" + codigo +
                 ", tarifa=" + tarifa +
                 ", fecha_emision=" + fecha_emision +

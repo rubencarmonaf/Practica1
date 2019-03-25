@@ -1,12 +1,12 @@
 package menu;
 
-import data.Cartera;
-import utilities.Facturas;
-import utilities.Llamadas;
+import Clientes.Cartera;
+import Facturas.Factura;
+import Llamadas.Llamada;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import static data.Cartera.sc;
+import static Clientes.Cartera.sc;
 
 
 public class NuevaFactura implements EjecutaOpcion {
@@ -16,8 +16,8 @@ public class NuevaFactura implements EjecutaOpcion {
         String nif = sc.nextLine();
         double tiempo_tot = 0;
         double tarifa = Cartera.listaclientes.get(nif).tarifa.getEuromin();
-        for (Llamadas llamadas : Cartera.listaclientes.get(nif).mostrarllamadas()) {
-            tiempo_tot += llamadas.getDuracion_llamada();
+        for (Llamada llamada : Cartera.listaclientes.get(nif).mostrarllamadas()) {
+            tiempo_tot += llamada.getDuracion_llamada();
         }
         double tot_factura = tiempo_tot * tarifa;
         System.out.print("Código Factura: ");
@@ -27,7 +27,7 @@ public class NuevaFactura implements EjecutaOpcion {
         LocalDateTime mes_ini = LocalDateTime.now();
         LocalDateTime mes_fin = LocalDateTime.now();
         LocalDateTime [] facturacion = {mes_ini, mes_fin};
-        Facturas factura = new Facturas(codigo, Cartera.listaclientes.get(nif).tarifa, fecha_emision, facturacion, tot_factura);
+        Factura factura = new Factura(codigo, Cartera.listaclientes.get(nif).tarifa, fecha_emision, facturacion, tot_factura);
         Cartera.listaclientes.get(nif).anadrifactura(codigo, factura);
         System.out.println();
     }

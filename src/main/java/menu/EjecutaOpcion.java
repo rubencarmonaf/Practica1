@@ -1,6 +1,6 @@
 package menu;
 
-import data.Cartera;
+import Clientes.Cartera;
 
 import java.io.PrintStream;
 import java.util.Scanner;

@@ -1,44 +1,49 @@
-package data;
+package Clientes;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
-import utilities.*;
 
-public class Clientes {
+import Facturas.Factura;
+import Llamadas.Llamada;
+import Tarifas.Tarifa;
+
+public class Cliente {
 
     public String nombre;
     public String NIF;
-    public Direcciones direccion;
+    public Direccion direccion;
     public String correo_electronico;
     public Calendar fecha_alta;
     public Tarifa tarifa;
-    public List<Llamadas> Listallamadas = new ArrayList<>();
-    public HashMap<Integer, Facturas> Listafacturas = new HashMap<>();
+    public List<Llamada> listallamadas;
+    public HashMap<Integer, Factura> Listafacturas;
 
-    public Clientes(String nombre, String NIF, Direcciones direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
+    public Cliente(String nombre, String NIF, Direccion direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         this.nombre = nombre;
         this.NIF = NIF;
         this.direccion = direccion;
         this.correo_electronico = correo_electronico;
         this.fecha_alta = fecha_alta;
         this.tarifa = tarifa;
+        this.listallamadas = new ArrayList<>();
+        this.Listafacturas = new HashMap<>();
     }
 
-    public void anadirllamada(Llamadas llamada) {
-        Listallamadas.add(llamada);
+    public void anadirllamada(Llamada llamada) {
+        listallamadas.add(llamada);
     }
 
-    public List<Llamadas> mostrarllamadas(){
-        return Listallamadas;
+    public List<Llamada> mostrarllamadas(){
+        return listallamadas;
     }
 
-    public void anadrifactura(int codigo, Facturas factura) {
+    public void anadrifactura(int codigo, Factura factura) {
         Listafacturas.put(codigo, factura);
     }
 
-    public HashMap<Integer, Facturas> mostrarfacturas(){
+    public HashMap<Integer, Factura> mostrarfacturas(){
         return Listafacturas;
     }
 
@@ -54,7 +59,7 @@ public class Clientes {
         return NIF;
     }
 
-    public Direcciones getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
@@ -74,7 +79,7 @@ public class Clientes {
         this.NIF = NIF;
     }
 
-    public void setDireccion(Direcciones direccion) {
+    public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
 
@@ -92,7 +97,7 @@ public class Clientes {
 
     @Override
     public String toString() {
-        return "data.Clientes{" +
+        return "Cliente{" +
                 "nombre='" + nombre + '\'' +
                 ", NIF='" + NIF + '\'' +
                 ", direccion=" + direccion +

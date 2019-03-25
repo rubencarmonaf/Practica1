@@ -1,6 +1,8 @@
-package utilities;
+package Tarifas;
 
-public class Tarifa {
+import java.io.Serializable;
+
+public class Tarifa implements Serializable {
     private double euromin;
 
     public Tarifa(double euromin) {
@@ -17,7 +19,7 @@ public class Tarifa {
 
     @Override
     public String toString() {
-        return "utilities.Tarifa{" +
+        return "Tarifas.Tarifa{" +
                 "euromin=" + euromin +
                 '}';
     }

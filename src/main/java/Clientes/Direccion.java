@@ -1,12 +1,14 @@
-package utilities;
+package Clientes;
 
-public class Direcciones {
+import java.io.Serializable;
+
+public class Direccion implements Serializable {
 
     private String codigo_postal;
     private String provincia;
     private String poblacion;
 
-    public Direcciones(String codigo_postal, String provincia, String poblacion) {
+    public Direccion(String codigo_postal, String provincia, String poblacion) {
         this.codigo_postal = codigo_postal;
         this.provincia = provincia;
         this.poblacion = poblacion;
@@ -38,7 +40,7 @@ public class Direcciones {
 
     @Override
     public String toString() {
-        return "utilities.Direcciones{" +
+        return "Clientes.Direccion{" +
                 "codigo_postal='" + codigo_postal + '\'' +
                 ", provincia='" + provincia + '\'' +
                 ", poblacion='" + poblacion + '\'' +

@@ -1,4 +1,4 @@
-package data;
+package Clientes;
 
 import es.uji.www.GeneradorDatosINE;
 
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Cartera {
-    public static HashMap<String, Clientes> listaclientes;
-    public static List<Clientes> auxlistaclientes;
+    public static HashMap<String, Cliente> listaclientes;
+    public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
     public static GeneradorDatosINE generador;
 
