@@ -1,4 +1,4 @@
-package menu;
+package Menu;
 
 import java.util.*;
 import Clientes.Cartera;

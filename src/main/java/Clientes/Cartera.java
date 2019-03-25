@@ -2,12 +2,13 @@ package Clientes;
 
 import es.uji.www.GeneradorDatosINE;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Cartera {
+public class Cartera implements Serializable {
     public static HashMap<String, Cliente> listaclientes;
     public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
