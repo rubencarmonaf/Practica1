@@ -3,6 +3,7 @@ package menu;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
+import management.ClientManager;
 import data.Clientes;
 import data.Empresa;
 import data.Particular;
@@ -33,16 +34,16 @@ public class Menu {
                     crearEmpresa();
                     break;
                 case 3:
-                    borrarcliente();
+                    ClientManager.borrarcliente();
                     break;
                 case 4:
-                    showclientes();
+                    ClientManager.showclientes();
                     break;
                 case 5:
-                    datoscliente();
+                    ClientManager.datoscliente();
                     break;
                 case 6:
-                    cambiartarifa();
+                    ClientManager.cambiartarifa();
                     break;
                 case 7:
                     dardealtallamada();
@@ -66,7 +67,7 @@ public class Menu {
         }
     }
 
-    public static void showclientes() {
+    /*public static void showclientes() {
         for(int i=0;i<auxlistaclientes.size();i++){
             System.out.println(auxlistaclientes.get(i).toString());
         }
@@ -78,7 +79,7 @@ public class Menu {
         System.out.print("Introduce la nueva tarifa: ");
         double tarifa = sc.nextDouble();
         listaclientes.get(nif).tarifa.setEuromin(tarifa);
-    }
+    }*/
 
     public static void emitirfactura() {
         String nif = getnif();
@@ -116,7 +117,7 @@ public class Menu {
         System.out.println();
     }
 
-    public static void borrarcliente() {
+    /*public static void borrarcliente() {
         String nif = getnif();
         listaclientes.remove(nif);
         int index = -1;
@@ -128,7 +129,7 @@ public class Menu {
             }
         }
         System.out.println();
-    }
+    }*/
 
     public static void dardealtallamada() {
         System.out.print("Numero llamado: ");
@@ -152,11 +153,11 @@ public class Menu {
         System.out.println();
     }
 
-    public static void datoscliente() {
+    /*public static void datoscliente() {
         String nif = getnif();
         System.out.println(listaclientes.get(nif).toString());
         System.out.println();
-    }
+    }*/
 
     public static void crearParticular() {
         Direcciones dir = new Direcciones("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
