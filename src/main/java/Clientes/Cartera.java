@@ -12,6 +12,7 @@ import Utilities.MetodosAyuda;
 import es.uji.www.GeneradorDatosINE;
 
 import java.io.Serializable;
+import java.lang.reflect.Type;
 import java.util.*;
 
 public class Cartera implements Serializable {
