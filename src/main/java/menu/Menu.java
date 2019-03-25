@@ -1,3 +1,5 @@
+package menu;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -10,7 +12,7 @@ import utilities.Facturas;
 import utilities.Llamadas;
 import utilities.Tarifa;
 
-public class TestFacturacion {
+public class Menu {
     static HashMap<String, Clientes> listaclientes = new HashMap<>();
     static List<Clientes> auxlistaclientes = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
