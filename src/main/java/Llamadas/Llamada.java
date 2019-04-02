@@ -1,10 +1,12 @@
 package Llamadas;
 
+import Fechas.EntreFechas;
+
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Llamada implements Serializable {
+public class Llamada extends EntreFechas implements Serializable {
 
     private String numero_llamado;
     private Calendar fecha_llamada;

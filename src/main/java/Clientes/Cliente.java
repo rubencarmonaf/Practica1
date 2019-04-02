@@ -1,15 +1,17 @@
 package Clientes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
 import Facturas.Factura;
+import Fechas.EntreFechas;
 import Llamadas.Llamada;
 import Tarifas.Tarifa;
 
-public class Cliente {
+public class Cliente extends EntreFechas implements Serializable {
 
     public String nombre;
     public String NIF;

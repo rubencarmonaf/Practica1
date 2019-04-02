@@ -12,10 +12,9 @@ import Utilities.MetodosAyuda;
 import es.uji.www.GeneradorDatosINE;
 
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.*;
 
-public class Cartera implements Serializable {
+public class Cartera extends EntreFechas implements Serializable {
     public static HashMap<String, Cliente> listaclientes;
     public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
@@ -159,7 +158,7 @@ public class Cartera implements Serializable {
 
     public HashSet<Cliente> between_alta_clientes(Calendar fecha_inicio, Calendar fecha_fin) {
         try {
-            return EntreFechas.listadolista(EntreFechas.listentrefechas(listaclientes.values(), fecha_inicio, fecha_fin));
+            return listentrefechas(listaclientes.values(), fecha_inicio, fecha_fin);
         }
         catch (IllegalPeriodException e) {
             System.out.println("Periodo de fechas no válido.");
@@ -170,7 +169,7 @@ public class Cartera implements Serializable {
     public HashSet<Llamada> betweenllamadas(String codigo, Calendar fecha_inicio, Calendar fecha_fin){
         try {
             Collection<Llamada> c = listaclientes.get(codigo).listallamadas;
-            return EntreFechas.listadolista(EntreFechas.listentrefechas(c, fecha_inicio, fecha_fin));
+            return listentrefechas(c, fecha_inicio, fecha_fin);
         }
         catch (IllegalPeriodException p) {
             System.out.println("Periodo de fechas no válido.");
@@ -180,7 +179,7 @@ public class Cartera implements Serializable {
 
     public HashSet<Factura> betweenfacturas(String codigo, Calendar fecha_inicio, Calendar fecha_fin) {
         try {
-            return EntreFechas.listadolista(EntreFechas.listentrefechas(listaclientes.get(codigo).Listafacturas.values(), fecha_inicio, fecha_fin));
+            return listentrefechas(listaclientes.get(codigo).Listafacturas.values(), fecha_inicio, fecha_fin);
         }
         catch (IllegalPeriodException p) {
             System.out.println("Periodo de fechas no válido.");

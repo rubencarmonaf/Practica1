@@ -1,19 +1,22 @@
 package Facturas;
 
+import Fechas.EntreFechas;
 import Tarifas.Tarifa;
 
 import java.io.Serializable;
 import java.util.Calendar;
 
-public class Factura implements Serializable {
+public class Factura extends EntreFechas implements Serializable {
 
-    private int codigo;
+    private String codigo;
     private Tarifa tarifa;
     private Calendar fecha_emision;
     private Calendar [] fecha_facturacion;
     private double importe;
 
-    public Factura(int codigo, Tarifa tarifa, Calendar fecha_emision, Calendar [] fecha_facturacion, double importe) {
+    public Factura() { }
+
+    public Factura(String codigo, Tarifa tarifa, Calendar fecha_emision, Calendar [] fecha_facturacion, double importe) {
         this.codigo = codigo;
         this.tarifa = tarifa;
         this.fecha_emision = fecha_emision;
@@ -25,7 +28,7 @@ public class Factura implements Serializable {
         return fecha_emision;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
@@ -41,7 +44,7 @@ public class Factura implements Serializable {
         return importe;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

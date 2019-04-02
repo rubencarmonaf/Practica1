@@ -1,26 +1,31 @@
 package Menu;
 
-import java.io.Serializable;
 import java.util.*;
 import Clientes.Cartera;
 import Clientes.Cliente;
+import Facturas.ConjuntoFacturas;
 import Excepciones.ExistingBillException;
 import Excepciones.ExistingClientException;
+import Excepciones.InvalidAnswerException;
 import Excepciones.NonExistingClientException;
 import Utilities.MetodosAyuda;
-import Fechas.EntreFechas;
 
-public class Menu implements Serializable {
+public class Menu {
 
-    public static void main(String [ ] args) throws ExistingClientException, NonExistingClientException, ExistingBillException {
+    public static void main(String [ ] args) throws ExistingClientException, NonExistingClientException, ExistingBillException, InvalidAnswerException {
         new Menu().ejecuta();
     }
 
-    private void ejecuta() throws ExistingClientException, NonExistingClientException, ExistingBillException {
+    private void ejecuta() throws ExistingClientException, NonExistingClientException, ExistingBillException, InvalidAnswerException {
         Scanner sc = new Scanner(System.in);
         Cartera cartera = new Cartera();
         MetodosAyuda metodosAyuda = new MetodosAyuda();
         OpcionMenu opcionMenu;
+        ConjuntoFacturas conjunto_facturas  = new ConjuntoFacturas();
+        Cartera cartera_clientes = new Cartera();
+        String load = MemoryCard.load();
+        cartera_clientes = MemoryCard.loading(cartera_clientes, load);
+        conjunto_facturas = MemoryCard.loading(conjunto_facturas, load);
         do {
             System.out.println(OpcionMenu.menu());
             System.out.print("Elige una opción: ");
@@ -74,6 +79,7 @@ public class Menu implements Serializable {
                     cartera.betweenfacturas(codigo2, metodosAyuda.mes_ini(), metodosAyuda.mes_fin());
                     break;
                 case SALIR:
+                    MemoryCard.save(conjunto_facturas, cartera_clientes);
                     break;
             }
         } while(opcionMenu != OpcionMenu.SALIR);

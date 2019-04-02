@@ -15,7 +15,7 @@ public class EntreFechas implements Serializable {
         return this.fecha;
     }
 
-    public static <T extends EntreFechas> HashSet<T> listentrefechas(Collection<T> datos, Calendar fecha_inicio, Calendar fecha_fin) throws IllegalPeriodException {
+    public <T extends EntreFechas> HashSet<T> listentrefechas(Collection<T> datos, Calendar fecha_inicio, Calendar fecha_fin) throws IllegalPeriodException {
         if(fecha_inicio.after(fecha_fin)) {
             throw new IllegalPeriodException();
         }
@@ -28,7 +28,7 @@ public class EntreFechas implements Serializable {
         return (HashSet<T>) res;
     }
 
-    public static <T extends EntreFechas> String listadolista(HashSet<T> lista) {
+    public <T extends EntreFechas> String listadolista(HashSet<T> lista) {
         StringBuilder listado = new StringBuilder();
         listado.append("\n");
         for (T dato : lista)
