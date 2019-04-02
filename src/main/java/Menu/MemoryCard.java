@@ -11,14 +11,13 @@ public class MemoryCard {
 
     public static String load() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("¿Desea cargar la información guardada?(Y/N): ");
+        System.out.print("¿Quieres cargar toda la información?(S/N): ");
         return scanner.next();
     }
 
     public static Cartera loading(Cartera cartera_clientes, String respuesta) throws InvalidAnswerException {
-        if (respuesta.compareTo("Y") == 0 || respuesta.compareTo("y") == 0) {
+        if (respuesta.compareTo("S") == 0 || respuesta.compareTo("s") == 0) {
             try {
-
                 FileInputStream file = new FileInputStream("clientes.bin");
                 ObjectInputStream ois = new ObjectInputStream(file);
                 cartera_clientes = (Cartera) ois.readObject();
@@ -32,13 +31,13 @@ public class MemoryCard {
             }
         }
         else
-        if (respuesta.compareTo("Y") != 0 && respuesta.compareTo("y") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
+        if (respuesta.compareTo("S") != 0 && respuesta.compareTo("s") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
             throw new InvalidAnswerException();
         return cartera_clientes;
     }
 
     public static ConjuntoFacturas loading(ConjuntoFacturas total_facturas, String respuesta) throws InvalidAnswerException {
-        if (respuesta.compareTo("Y") == 0 || respuesta.compareTo("y") == 0) {
+        if (respuesta.compareTo("S") == 0 || respuesta.compareTo("s") == 0) {
             try {
 
                 FileInputStream file = new FileInputStream("facturas.bin");
@@ -54,16 +53,16 @@ public class MemoryCard {
             }
         }
         else
-        if (respuesta.compareTo("Y") != 0 && respuesta.compareTo("y") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
+        if (respuesta.compareTo("S") != 0 && respuesta.compareTo("s") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
             throw new InvalidAnswerException();
         return total_facturas;
     }
 
     public static void save(ConjuntoFacturas total_facturas, Cartera cartera_clientes) throws InvalidAnswerException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("¿Desea guardar la información actualizada?(Y/N): ");
+        System.out.print("¿Desea guardar la información actualizada?(S/N): ");
         String respuesta = scanner.next();
-        if (respuesta.compareTo("Y") == 0 || respuesta.compareTo("y") == 0) {
+        if (respuesta.compareTo("S") == 0 || respuesta.compareTo("s") == 0) {
             try {
                 FileOutputStream filecli = new FileOutputStream("clientes.bin");
                 ObjectOutputStream savecli = new ObjectOutputStream(filecli);
@@ -79,7 +78,7 @@ public class MemoryCard {
             }
         }
         else
-        if (respuesta.compareTo("Y") != 0 && respuesta.compareTo("y") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
+        if (respuesta.compareTo("S") != 0 && respuesta.compareTo("s") != 0 && respuesta.compareTo("N") != 0 && respuesta.compareTo("n") != 0)
             throw new InvalidAnswerException();
     }
 }

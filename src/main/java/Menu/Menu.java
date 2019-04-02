@@ -8,6 +8,7 @@ import Excepciones.ExistingBillException;
 import Excepciones.ExistingClientException;
 import Excepciones.InvalidAnswerException;
 import Excepciones.NonExistingClientException;
+import Fechas.EntreFechas;
 import Utilities.MetodosAyuda;
 
 public class Menu {
@@ -35,6 +36,7 @@ public class Menu {
 
             switch (opcionMenu) {
                 case NUEVO_PARTICULAR:
+                    System.out.println("nuevo part");
                     cartera.darDeAltaParticular();
                     break;
                 case NUEVA_EMPRESA:
@@ -68,15 +70,15 @@ public class Menu {
                     ConjuntoFacturas.mostrarFactura();
                     break;
                 case BETWEEN_ALTA_CLIENTE:
-                    HashSet<Cliente> clientes = cartera.between_alta_clientes(metodosAyuda.mes_ini(), metodosAyuda.mes_fin());
+                    EntreFechas.listadolista(cartera.between_alta_clientes(metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
                     break;
                 case BETWEEN_LLAMADAS:
                     String codigo = metodosAyuda.getnif();
-                    cartera.betweenllamadas(codigo, metodosAyuda.mes_ini(), metodosAyuda.mes_fin());
+                    EntreFechas.listadolista(cartera.betweenllamadas(codigo, metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
                     break;
                 case BETWEEN_FACTURAS:
                     String codigo2 = metodosAyuda.getnif();
-                    cartera.betweenfacturas(codigo2, metodosAyuda.mes_ini(), metodosAyuda.mes_fin());
+                    EntreFechas.listadolista(cartera.betweenfacturas(codigo2, metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
                     break;
                 case SALIR:
                     MemoryCard.save(conjunto_facturas, cartera_clientes);

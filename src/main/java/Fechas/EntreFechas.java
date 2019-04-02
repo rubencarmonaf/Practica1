@@ -28,7 +28,7 @@ public class EntreFechas implements Serializable {
         return (HashSet<T>) res;
     }
 
-    public <T extends EntreFechas> String listadolista(HashSet<T> lista) {
+    public static <T extends EntreFechas> String listadolista(HashSet<T> lista) {
         StringBuilder listado = new StringBuilder();
         listado.append("\n");
         for (T dato : lista)
