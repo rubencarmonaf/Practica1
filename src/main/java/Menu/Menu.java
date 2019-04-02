@@ -59,13 +59,13 @@ public class Menu {
                     cartera.mostrarLlamadas();
                     break;
                 case NUEVA_FACTURA:
-                    cartera.darDeAltaFactura();
+                    ConjuntoFacturas.addFactura();
                     break;
                 case DATOS_FACTURA:
-                    cartera.datosFactura();
+                    ConjuntoFacturas.datosFactura();
                     break;
                 case MOSTRAR_FACTURA:
-                    cartera.mostrarFactura();
+                    ConjuntoFacturas.mostrarFactura();
                     break;
                 case BETWEEN_ALTA_CLIENTE:
                     HashSet<Cliente> clientes = cartera.between_alta_clientes(metodosAyuda.mes_ini(), metodosAyuda.mes_fin());

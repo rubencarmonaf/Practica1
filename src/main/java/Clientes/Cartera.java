@@ -1,6 +1,5 @@
 package Clientes;
 
-import Excepciones.ExistingBillException;
 import Excepciones.ExistingClientException;
 import Excepciones.IllegalPeriodException;
 import Excepciones.NonExistingClientException;
@@ -67,47 +66,11 @@ public class Cartera extends EntreFechas implements Serializable {
         System.out.println();
     }
 
-    public void darDeAltaFactura() throws ExistingBillException{
-        String nif = metodosAyuda.getnif();
-        double tiempo_tot = 0;
-        double tarifa = Cartera.listaclientes.get(nif).tarifa.getEuromin();
-        for (Llamada llamada : Cartera.listaclientes.get(nif).mostrarllamadas()) {
-            tiempo_tot += llamada.getDuracion_llamada();
-        }
-        double tot_factura = tiempo_tot * tarifa;
-        System.out.print("Código Factura: ");
-        int codigo =  sc.nextInt();
-        if (Cartera.listaclientes.get(nif).Listafacturas.containsKey(codigo))
-            throw new ExistingBillException();
-        Calendar mes_ini = metodosAyuda.mes_ini();
-        Calendar mes_fin = metodosAyuda.mes_fin();
-        Calendar [] facturacion = {mes_ini, mes_fin};
-        Factura factura = new Factura(codigo, Cartera.listaclientes.get(nif).tarifa, mes_ini, facturacion, tot_factura);
-        Cartera.listaclientes.get(nif).anadrifactura(codigo, factura);
-        System.out.println();
-    }
-
-    public void mostrarFactura() {
-        String nif = metodosAyuda.getnif();
-        for (int codigo : Cartera.listaclientes.get(nif).mostrarfacturas().keySet()) {
-            System.out.println(Cartera.listaclientes.get(nif).mostrarfacturas().get(codigo).toString());
-        }
-        System.out.println();
-    }
-
     public void mostrarLlamadas() {
         String nif = metodosAyuda.getnif();
         for (Llamada llamada : Cartera.listaclientes.get(nif).mostrarllamadas()) {
             System.out.println(llamada.toString());
         }
-        System.out.println();
-    }
-
-    public void datosFactura() {
-        String nif = metodosAyuda.getnif();
-        System.out.print("Código Factura: ");
-        int codigo =  sc.nextInt();
-        System.out.println(Cartera.listaclientes.get(nif).Listafacturas.get(codigo).toString());
         System.out.println();
     }
 

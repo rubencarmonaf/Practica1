@@ -20,7 +20,7 @@ public class Cliente extends EntreFechas implements Serializable {
     public Calendar fecha_alta;
     public Tarifa tarifa;
     public List<Llamada> listallamadas;
-    public HashMap<Integer, Factura> Listafacturas;
+    public HashMap<String, Factura> Listafacturas;
 
     public Cliente(String nombre, String NIF, Direccion direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         this.nombre = nombre;
@@ -41,11 +41,11 @@ public class Cliente extends EntreFechas implements Serializable {
         return listallamadas;
     }
 
-    public void anadrifactura(int codigo, Factura factura) {
+    public void anadrifactura(String codigo, Factura factura) {
         Listafacturas.put(codigo, factura);
     }
 
-    public HashMap<Integer, Factura> mostrarfacturas(){
+    public HashMap<String, Factura> mostrarfacturas(){
         return Listafacturas;
     }
 
