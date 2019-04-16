@@ -6,9 +6,6 @@ import java.util.Calendar;
 
 public class ConTarifaDomingo extends TarifaExtra{
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -2541021553410858697L;
 
     Tarifa tarifa;

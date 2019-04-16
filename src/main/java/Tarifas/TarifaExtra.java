@@ -2,9 +2,6 @@ package Tarifas;
 
 public abstract class TarifaExtra extends TarifaBasica {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -6764271660877292862L;
     public TarifaExtra(Tarifa tarifa, double importeExtra) {
         super(importeExtra);

@@ -5,9 +5,7 @@ import Llamadas.Llamada;
 import java.util.Calendar;
 
 public class ConTarifaTardes extends TarifaExtra{
-    /**
-     *
-     */
+
     private static final long serialVersionUID = -1636978535843579339L;
 
     public ConTarifaTardes(Tarifa tarifa, double importeExtra) {

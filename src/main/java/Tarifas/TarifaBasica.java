@@ -4,9 +4,6 @@ import Llamadas.Llamada;
 
 public class TarifaBasica extends Tarifa{
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 7493440740613869440L;
 
     public TarifaBasica(){
