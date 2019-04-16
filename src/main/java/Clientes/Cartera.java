@@ -33,11 +33,55 @@ public class Cartera extends EntreFechas implements Serializable {
         metodosAyuda = new MetodosAyuda();
     }
 
+    private void darAltaCliente() {
+        consola.mostrarDato("Introducir datos cliente: \n");
+
+        String empresa = consola.pedirDato("¿Es una empresa? (s/n): ");
+        String apellidos = null;
+        if(empresa.equals("n"))
+            apellidos = consola.pedirDato("Introduce los apellidos: ");
+
+        String nombre = consola.pedirDato("Introduce nombre: ");
+        String nif = consola.pedirDato("Introduce NIF: ");
+
+        consola.mostrarDato("Introduce dirección: \n");
+        int codP = Integer.parseInt(consola.pedirDato("	-Código Postal: "));
+        String prov = consola.pedirDato("	-Provincia: ");
+        String pob = consola.pedirDato("	-Población: ");
+        Direccion dir = new Direccion(codP, prov, pob);
+
+        String correo = consola.pedirDato("Introduce correo: ");
+
+        consola.mostrarDato("Introduce fecha de alta: \n");
+        int año = Integer.parseInt(consola.pedirDato("	-Año: "));
+        int mes = Integer.parseInt(consola.pedirDato("	-Mes (numérico): "));
+        int dia = Integer.parseInt(consola.pedirDato("	-Día: "));
+        Calendar fecha = Calendar.getInstance();
+        fecha.set(año, mes, dia);
+
+        Tarifa tarifa = null;
+        tarifa = TarifaFactory.crearTarifa(0,tarifa, Double.parseDouble(consola.pedirDato("Introduce tarifa: ")));
+
+        Cliente cliente;
+        if(empresa.equals("s"))
+            cliente = ClienteFactory.crearCliente(0,nombre, apellidos ,nif,dir,correo,fecha,tarifa);
+        else
+            cliente = ClienteFactory.crearCliente(1,nombre, apellidos, nif, dir, correo, fecha, tarifa);
+
+        /*try {
+            gestion.darDeAltaCliente(cliente);
+            consola.mostrarDato("\nCliente dado de alta \n\n");
+        }catch(ExistingClientException e) {
+            consola.mostrarDato("\n"+ e.getMessage() + "\n\n");
+        }*/
+
+    }
+
     public void darDeAltaParticular() throws ExistingClientException{
         String nif = generador.getNIF();
         if (Cartera.listaclientes.containsKey(nif))
             throw new ExistingClientException();
-        Direccion dir = new Direccion("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
+        Direccion dir = new Direccion(12540, generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
         Calendar today = Calendar.getInstance();
         Tarifa tarifa = null;
         tarifa = TarifaFactory.crearTarifa(Integer.parseInt(consola.pedirDato("Introduce el tipo de tarifa: ")),tarifa, Double.parseDouble(consola.pedirDato("Introduce tarifa: ")));
@@ -50,7 +94,7 @@ public class Cartera extends EntreFechas implements Serializable {
         String nif = generador.getNIF();
         if (Cartera.listaclientes.containsKey(nif))
             throw new ExistingClientException();
-        Direccion dir = new Direccion("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
+        Direccion dir = new Direccion(Integer.parseInt(consola.pedirDato("Introduce el CP: ")), generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
         Calendar today = Calendar.getInstance();
         Tarifa tarifa = null;
         tarifa = TarifaFactory.crearTarifa(Integer.parseInt(consola.pedirDato("Introduce el tipo de tarifa: ")),tarifa, Double.parseDouble(consola.pedirDato("Introduce tarifa: ")));

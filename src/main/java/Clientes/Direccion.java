@@ -5,17 +5,17 @@ import java.io.Serializable;
 public class Direccion implements Serializable {
 
     private static final long serialVersionUID = 8041694659183858247L;
-    private String codigo_postal;
+    private int codigo_postal;
     private String provincia;
     private String poblacion;
 
-    public Direccion(String codigo_postal, String provincia, String poblacion) {
+    public Direccion(int codigo_postal, String provincia, String poblacion) {
         this.codigo_postal = codigo_postal;
         this.provincia = provincia;
         this.poblacion = poblacion;
     }
 
-    public String getCodigo_postal() {
+    public int getCodigo_postal() {
         return codigo_postal;
     }
 
@@ -27,7 +27,7 @@ public class Direccion implements Serializable {
         return poblacion;
     }
 
-    public void setCodigo_postal(String codigo_postal) {
+    public void setCodigo_postal(int codigo_postal) {
         this.codigo_postal = codigo_postal;
     }
 
