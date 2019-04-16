@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Direccion implements Serializable {
 
+    private static final long serialVersionUID = 8041694659183858247L;
     private String codigo_postal;
     private String provincia;
     private String poblacion;

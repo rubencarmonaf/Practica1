@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 public class Particular extends Cliente implements Serializable{
 
+    private static final long serialVersionUID = -4781412848002462045L;
     private String apellidos;
 
     public Particular(String nombre, String apellidos, String NIF, Direccion direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {

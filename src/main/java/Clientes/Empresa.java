@@ -8,6 +8,8 @@ import java.util.Calendar;
 
 public class Empresa extends Cliente implements Serializable {
 
+    private static final long serialVersionUID = 6917603621901901744L;
+
     public Empresa(String nombre, String NIF, Direccion direccion, String correo_electronico, Calendar fecha_alta, Tarifa tarifa) {
         super(nombre, NIF, direccion, correo_electronico, fecha_alta, tarifa);
     }

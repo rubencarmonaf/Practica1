@@ -7,6 +7,8 @@ import Facturas.Factura;
 import Llamadas.Llamada;
 import Fechas.EntreFechas;
 import Tarifas.Tarifa;
+import Tarifas.TarifaFactory;
+import Utilities.Consola;
 import Utilities.MetodosAyuda;
 import es.uji.www.GeneradorDatosINE;
 
@@ -14,11 +16,14 @@ import java.io.Serializable;
 import java.util.*;
 
 public class Cartera extends EntreFechas implements Serializable {
+
+
     public static HashMap<String, Cliente> listaclientes;
     public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
     public static GeneradorDatosINE generador;
     MetodosAyuda metodosAyuda;
+    private Consola consola = new Consola();
 
     public Cartera() {
         listaclientes = new HashMap<>();
@@ -34,8 +39,9 @@ public class Cartera extends EntreFechas implements Serializable {
             throw new ExistingClientException();
         Direccion dir = new Direccion("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
         Calendar today = Calendar.getInstance();
-        Tarifa tar = new Tarifa(12);
-        Particular newclient = new Particular(generador.getNombre(), generador.getApellido(), nif, dir, "prueba@uji.es", today, tar);
+        Tarifa tarifa = null;
+        tarifa = TarifaFactory.crearTarifa(Integer.parseInt(consola.pedirDato("Introduce el tipo de tarifa: ")),tarifa, Double.parseDouble(consola.pedirDato("Introduce tarifa: ")));
+        Particular newclient = new Particular(generador.getNombre(), generador.getApellido(), nif, dir, "prueba@uji.es", today, tarifa);
         Cartera.listaclientes.put(nif, newclient);
         Cartera.auxlistaclientes.add(newclient);
     }
@@ -46,8 +52,9 @@ public class Cartera extends EntreFechas implements Serializable {
             throw new ExistingClientException();
         Direccion dir = new Direccion("12540", generador.getProvincia(), generador.getPoblacion(generador.getProvincia()));
         Calendar today = Calendar.getInstance();
-        Tarifa tar = new Tarifa(12);
-        Empresa newclient = new Empresa(generador.getNombre(), nif, dir, "prueba@uji.es", today, tar);
+        Tarifa tarifa = null;
+        tarifa = TarifaFactory.crearTarifa(Integer.parseInt(consola.pedirDato("Introduce el tipo de tarifa: ")),tarifa, Double.parseDouble(consola.pedirDato("Introduce tarifa: ")));
+        Empresa newclient = new Empresa(generador.getNombre(), nif, dir, "prueba@uji.es", today, tarifa);
         Cartera.listaclientes.put(nif, newclient);
         Cartera.auxlistaclientes.add(newclient);
     }

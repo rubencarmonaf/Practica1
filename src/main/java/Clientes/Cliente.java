@@ -13,6 +13,7 @@ import Tarifas.Tarifa;
 
 public class Cliente extends EntreFechas implements Serializable {
 
+    private static final long serialVersionUID = 4886706257783637148L;
     public String nombre;
     public String NIF;
     public Direccion direccion;
