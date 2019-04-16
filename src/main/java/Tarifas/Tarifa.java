@@ -1,12 +1,23 @@
 package Tarifas;
 
+import Llamadas.Llamada;
+
 import java.io.Serializable;
 
-public class Tarifa implements Serializable {
+public abstract class Tarifa implements Serializable {
+    private static final long serialVersionUID = -3948344019451414987L;
     private double euromin;
+
+    public Tarifa() {
+        super();
+    }
 
     public Tarifa(double euromin) {
         this.euromin = euromin;
+    }
+
+    public Tarifa(Tarifa tarifa){
+        this.euromin = tarifa.euromin;
     }
 
     public double getEuromin() {
@@ -16,6 +27,8 @@ public class Tarifa implements Serializable {
     public void setEuromin(double euromin) {
         this.euromin = euromin;
     }
+
+    public abstract double calcularImporte(Llamada llamada);
 
     @Override
     public String toString() {

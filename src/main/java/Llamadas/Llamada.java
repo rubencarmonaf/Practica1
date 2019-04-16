@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class Llamada extends EntreFechas implements Serializable {
 
+    private static final long serialVersionUID = -3233202990795471243L;
     private String numero_llamado;
     private Calendar fecha_llamada;
     private Date hora_llamada;

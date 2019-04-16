@@ -2,7 +2,6 @@ package Menu;
 
 import java.util.*;
 import Clientes.Cartera;
-import Clientes.Cliente;
 import Facturas.ConjuntoFacturas;
 import Excepciones.ExistingBillException;
 import Excepciones.ExistingClientException;
