@@ -12,7 +12,7 @@ import Utilities.Consola;
 import Utilities.MetodosAyuda;
 import es.uji.www.GeneradorDatosINE;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 
 import static java.lang.Integer.parseInt;
@@ -33,6 +33,43 @@ public class Cartera extends EntreFechas implements Serializable {
         sc = new Scanner(System.in);
         generador = new GeneradorDatosINE();
         metodosAyuda = new MetodosAyuda();
+    }
+
+   /*public HashMap<String, Cliente> getListaClientes() {
+        return listaclientes;
+    }
+
+    public List<Cliente> getAuxClientes() {
+        return auxlistaclientes;
+    }*/
+
+    public void guardarDatos(){
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        try {
+            fos = new FileOutputStream("io/clientes.bin");
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(listaclientes);
+            oos.writeObject(auxlistaclientes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public void cargarDatos() {
+        String cargar = consola.pedirDato("Quieres cargar los datos?(s/n)");
+        if (cargar.equals("s")) {
+            FileInputStream fis = null;
+            ObjectInputStream ois = null;
+            try {
+                fis = new FileInputStream("io/clientes.bin");
+                ois = new ObjectInputStream(fis);
+                listaclientes = (HashMap<String, Cliente>) ois.readObject();
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void darAltaCliente() {

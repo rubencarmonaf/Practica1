@@ -21,11 +21,12 @@ public class Menu {
         Cartera cartera = new Cartera();
         MetodosAyuda metodosAyuda = new MetodosAyuda();
         OpcionMenu opcionMenu;
-        ConjuntoFacturas conjunto_facturas  = new ConjuntoFacturas();
+        cartera.cargarDatos();
+       /*ConjuntoFacturas conjunto_facturas  = new ConjuntoFacturas();
         Cartera cartera_clientes = new Cartera();
         String load = MemoryCard.load();
         cartera_clientes = MemoryCard.loading(cartera_clientes, load);
-        conjunto_facturas = MemoryCard.loading(conjunto_facturas, load);
+        conjunto_facturas = MemoryCard.loading(conjunto_facturas, load);*/
         do {
             System.out.println(OpcionMenu.menu());
             System.out.print("Elige una opción: ");
@@ -76,7 +77,8 @@ public class Menu {
                     EntreFechas.listadolista(cartera.betweenfacturas(codigo2, metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
                     break;
                 case SALIR:
-                    MemoryCard.save(conjunto_facturas, cartera_clientes);
+                    cartera.guardarDatos();
+                    System.out.println("Guardando los datos.");
                     break;
             }
         } while(opcionMenu != OpcionMenu.SALIR);
