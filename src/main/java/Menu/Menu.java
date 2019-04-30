@@ -34,12 +34,8 @@ public class Menu {
             opcionMenu = OpcionMenu.obtenerOpcion(opcion);
 
             switch (opcionMenu) {
-                case NUEVO_PARTICULAR:
-                    System.out.println("nuevo part");
-                    cartera.darDeAltaParticular();
-                    break;
-                case NUEVA_EMPRESA:
-                    cartera.darDeAltaEmpresa();
+                case DAR_DE_ALTA_CLIENTE:
+                    cartera.darAltaCliente();
                     break;
                 case BORRAR_CLIENTE:
                     cartera.borrarCliente();

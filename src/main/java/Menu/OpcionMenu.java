@@ -1,8 +1,7 @@
 package Menu;
 
 public enum OpcionMenu {
-    NUEVO_PARTICULAR("Nuevo particular"),
-    NUEVA_EMPRESA("Nueva empresa"),
+    DAR_DE_ALTA_CLIENTE("Dar de alta nuevo cliente"),
     BORRAR_CLIENTE("Borrar cliente"),
     CAMBIAR_TARIFA("Cambiar tarifa"),
     DATOS_CLIENTE("Datos cliente"),
