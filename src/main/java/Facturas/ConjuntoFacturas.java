@@ -71,7 +71,7 @@ public class ConjuntoFacturas extends EntreFechas implements Serializable {
         System.out.println();
     }*/
 
-    private void recuperarFacturas() {
+    public void recuperarFacturas() {
         String nif = consola.pedirDato("Introduce NIF: ");
         try {
             List<Factura> facturas = gestion.recuperarFacturas(nif);

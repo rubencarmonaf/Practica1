@@ -63,7 +63,7 @@ public class Menu {
                     ConjuntoFacturas.recuperarDatosFactura();
                     break;
                 case MOSTRAR_FACTURA:
-                    //ConjuntoFacturas.mostrarFactura();
+                    ConjuntoFacturas.recuperarFacturas();
                     break;
                 case BETWEEN_ALTA_CLIENTE:
                     EntreFechas.listadolista(cartera.between_alta_clientes(metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
