@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c6e0ee-6ffd-4108-86a7-99885d5d7819" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Excepciones/ListLlamadasNullExecption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Excepciones/NonExistingBillException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clientes/Cartera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clientes/Cartera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Facturas/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Facturas/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/ImplementacionModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/ImplementacionModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,24 +76,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="1100" />
+          <entry key="java" value="1397" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1100" />
+          <entry key="JAVA" value="1397" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="87" />
+          <entry key="java" value="109" />
           <entry key="url" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="87" />
+          <entry key="JAVA" value="109" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -100,20 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="51">
+              <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+            <state relative-caret-position="417">
+              <caret line="1308" column="54" selection-start-line="1308" selection-start-column="46" selection-end-line="1308" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2225#2226#0" expanded="true" />
@@ -146,19 +138,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            <state relative-caret-position="493">
+              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Excepciones/ExistingBillException.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="167">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,12 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Fechas/IllegalPeriodException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Excepciones/ExistingClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Excepciones/Excepcion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Menu/NuevaEmpresa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Excepciones/ExistingCallException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Menu/NuevaLlamada.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/MostrarFactura.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/DatosFactura.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/CambiarTarifa.java" />
@@ -205,13 +211,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Menu/ListadoLlamadas.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/DatosCliente.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/MemoryUtilitie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/MemoryCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/InvoiceAlreadyExistentException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Facturas/Factura.java" />
         <option value="$PROJECT_DIR$/src/main/java/Facturas/ConjuntoFacturas.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/MemoryCard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tarifas/Tarifa.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tarifas/TarifaFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/Clientes/ClienteFactory.java" />
@@ -234,11 +237,20 @@
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/ListLlamadasNullExecption.java" />
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/NonExistingBillExecption.java" />
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/NonExistingBillException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Clientes/Cartera.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java" />
         <option value="$PROJECT_DIR$/src/main/java/Vista/ImplementacionVista.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista/ImplementacionVista.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista.java" />
         <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Facturas/Factura.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/ImplementacionModelo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Clientes/Cartera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java" />
       </list>
     </option>
   </component>
@@ -317,7 +329,58 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Facturas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Fechas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InterfazUsuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InterfazUsuario" type="462c0819:PsiDirectoryNode" />
+              <item name="Controlador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InterfazUsuario" type="462c0819:PsiDirectoryNode" />
+              <item name="Modelo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InterfazUsuario" type="462c0819:PsiDirectoryNode" />
               <item name="Vista" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Llamadas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Practica1" type="b2602c69:ProjectViewProjectNode" />
@@ -344,7 +407,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557227600985" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557229639356" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/PracticaEI1017-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -405,12 +468,12 @@
       <workItem from="1554202259916" duration="5139000" />
       <workItem from="1555412573748" duration="3185000" />
       <workItem from="1556621269684" duration="1221000" />
-      <workItem from="1557226367063" duration="1111000" />
+      <workItem from="1557226367063" duration="3393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17587000" />
+    <option name="totallyTimeSpent" value="19869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -425,7 +488,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33077765" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42600897" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42600897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -447,7 +510,7 @@
       <window_info anchor="right" id="Maven" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17420538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -455,13 +518,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32842582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4262473" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.33077765" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42600897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3308026" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33071747" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3295583" />
@@ -485,10 +548,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/classes/Menu/OpcionMenu.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Menu/NuevoParticular.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Menu/NuevaEmpresa.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Menu/NuevaLlamada.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Menu/NuevaFactura.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Menu/MostrarFactura.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Menu/ListadoLlamadas.java" />
@@ -514,31 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Facturas/Factura.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/TarifaBasica.java.url" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/TarifaBasica.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -550,6 +585,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -557,6 +595,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -564,6 +605,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -571,6 +615,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -578,6 +625,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,6 +654,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,6 +679,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,13 +689,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/Tarifa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -653,13 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/ClienteFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -701,6 +748,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/Tarifa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/ClienteFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -711,20 +797,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="30" column="146" selection-start-line="30" selection-start-column="120" selection-end-line="30" selection-end-column="146" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/ImplementacionModelo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7554#7584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Facturas/Factura.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/ImplementacionVista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="417">
+          <caret line="1308" column="54" selection-start-line="1308" selection-start-column="46" selection-end-line="1308" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
@@ -743,10 +882,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InterfazUsuario/Vista/Vista.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Llamadas/Llamada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        <state relative-caret-position="493">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

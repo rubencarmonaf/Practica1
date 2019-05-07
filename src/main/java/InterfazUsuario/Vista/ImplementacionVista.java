@@ -9,6 +9,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Locale;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
@@ -23,17 +24,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import Clientes.Cartera;
 import Clientes.Cliente;
 import Clientes.Direccion;
 import Excepciones.*;
 import Facturas.Factura;
+import InterfazUsuario.Controlador.Controlador;
+import InterfazUsuario.Modelo.Modelo;
 import Llamadas.Llamada;
 import Tarifas.Tarifa;
 import Tarifas.TarifaFactory;
 
 public class ImplementacionVista implements Vista {
-    private Cartera cartera;
+    private Controlador controlador;
     private Modelo modelo;
     private JFrame ventana = null;
     Container contenedor = null;
@@ -67,8 +69,8 @@ public class ImplementacionVista implements Vista {
         this.modelo = modelo;
     }
 
-    public void setControlador(Cartera cartera) {
-        this.cartera = cartera;
+    public void setControlador(Controlador controlador) {
+        this.controlador = controlador;
     }
 
     public ImplementacionVista() {
@@ -1112,7 +1114,7 @@ public class ImplementacionVista implements Vista {
                 Tarifa tarifaLocal = null;
                 tarifaLocal = TarifaFactory.crearTarifa(0, tarifaLocal, Double.parseDouble(tarifa.getText().trim()));
                 try {
-                    cartera.creaCliente(tipo, nombre.getText(), apellido.getText(), nif.getText(), dir,
+                    controlador.creaCliente(tipo, nombre.getText(), apellido.getText(), nif.getText(), dir,
                             correo.getText(), fecha, tarifaLocal);
                     modelo.guardarDatos();
 
@@ -1139,7 +1141,7 @@ public class ImplementacionVista implements Vista {
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 try {
-                    Cartera.borrarCliente();
+                    controlador.borrarCliente(nif.getText());
                     modelo.guardarDatos();
                     JLabel clienteBorrado = new JLabel("Cliente borrado con éxito");
                     panelFinal.add(clienteBorrado);
@@ -1167,21 +1169,17 @@ public class ImplementacionVista implements Vista {
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 try {
-                    Cartera.cambiarTarifa();
-                    modelo.guardarDatos();
-                    panelFinal = new JPanel();
-                    JLabel tarifaCambiada = new JLabel("Tarifa cambiada con éxito");
-                    panelFinal.add(tarifaCambiada);
-                    panelAbajo.add(panelFinal);
-                    panelFinal.updateUI();
-                    panelAbajo.updateUI();
+                    controlador.cambiarTarifa(nif.getText(), tarifaLocal);
                 } catch (NonExistingClientException e1) {
-                    JLabel clienteNoEncontrado = new JLabel("Cliente no encontrado");
-                    panelFinal.add(clienteNoEncontrado);
-                    panelAbajo.add(panelFinal);
-                    panelFinal.updateUI();
-                    panelAbajo.updateUI();
+                    e1.printStackTrace();
                 }
+                modelo.guardarDatos();
+                panelFinal = new JPanel();
+                JLabel tarifaCambiada = new JLabel("Tarifa cambiada con éxito");
+                panelFinal.add(tarifaCambiada);
+                panelAbajo.add(panelFinal);
+                panelFinal.updateUI();
+                panelAbajo.updateUI();
             }
         }
     }
@@ -1297,17 +1295,18 @@ public class ImplementacionVista implements Vista {
             String texto = submit.getText();
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
-                Calendar fecha = Calendar.getInstance();
+                Calendar fecha_llamada = Calendar.getInstance();
                 int añoLocal = Integer.parseInt(año.getText().trim());
                 int mesLocal = Integer.parseInt(mes.getText().trim());
                 int diaLocal = Integer.parseInt(dia.getText().trim());
                 int horaLocal = Integer.parseInt(hora.getText().trim());
                 int minLocal = Integer.parseInt(minuto.getText().trim());
-                fecha.set(añoLocal, mesLocal, diaLocal, horaLocal, minLocal);
+                fecha_llamada.set(añoLocal, mesLocal, diaLocal, horaLocal, minLocal);
                 int telefono = Integer.parseInt(telf.getText().trim());
                 int dura = Integer.parseInt(dur.getText().trim());
 
-                Llamada llamada = new Llamada(telefono, fecha, dura);
+                Calendar hora_llamada = Calendar.getInstance(Locale.getDefault());
+                Llamada llamada = new Llamada(telefono, fecha_llamada, hora_llamada.getTime(), dura);
                 try {
                     controlador.darDeAltaLlamada(nif.getText(), llamada);
                     modelo.guardarDatos();

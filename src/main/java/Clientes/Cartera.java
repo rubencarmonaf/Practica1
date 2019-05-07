@@ -89,7 +89,7 @@ public class Cartera extends EntreFechas implements Serializable {
         String num_llamado = sc.nextLine();
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
         System.out.print("Introducir tiempo llamada: ");
-        double tiempo_llamada = sc.nextDouble();
+        int tiempo_llamada = sc.nextInt();
         Llamada llamada = new Llamada(num_llamado, fecha, fecha.getTime(), tiempo_llamada);
         sc.nextLine();
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
@@ -151,7 +151,7 @@ public class Cartera extends EntreFechas implements Serializable {
         return clientes.toString();
     }
 
-    public HashSet<Cliente> between_alta_clientes(Calendar fecha_inicio, Calendar fecha_fin) {
+    public Collection<Cliente> between_alta_clientes(Calendar fecha_inicio, Calendar fecha_fin) {
         try {
             return listentrefechas(listaclientes.values(), fecha_inicio, fecha_fin);
         }
@@ -161,7 +161,7 @@ public class Cartera extends EntreFechas implements Serializable {
         return new HashSet<>();
     }
 
-    public HashSet<Llamada> betweenllamadas(String codigo, Calendar fecha_inicio, Calendar fecha_fin){
+    public Collection<Llamada> betweenllamadas(String codigo, Calendar fecha_inicio, Calendar fecha_fin){
         try {
             Collection<Llamada> c = listaclientes.get(codigo).listallamadas;
             return listentrefechas(c, fecha_inicio, fecha_fin);
@@ -172,7 +172,7 @@ public class Cartera extends EntreFechas implements Serializable {
         return new HashSet<>();
     }
 
-    public HashSet<Factura> betweenfacturas(String codigo, Calendar fecha_inicio, Calendar fecha_fin) {
+    public Collection<Factura> betweenfacturas(String codigo, Calendar fecha_inicio, Calendar fecha_fin) {
         try {
             return listentrefechas(listaclientes.get(codigo).Listafacturas.values(), fecha_inicio, fecha_fin);
         }

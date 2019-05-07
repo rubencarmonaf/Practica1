@@ -8,15 +8,15 @@ import java.util.Calendar;
 
 public class Factura extends EntreFechas implements Serializable {
 
-    private String codigo;
+    private int codigo;
     private Tarifa tarifa;
     private Calendar fecha_emision;
-    private Calendar [] fecha_facturacion;
+    private Calendar fecha_facturacion;
     private double importe;
 
     public Factura() { }
 
-    public Factura(String codigo, Tarifa tarifa, Calendar fecha_emision, Calendar [] fecha_facturacion, double importe) {
+    public Factura(int codigo, Tarifa tarifa, Calendar fecha_emision, Calendar fecha_facturacion, double importe) {
         this.codigo = codigo;
         this.tarifa = tarifa;
         this.fecha_emision = fecha_emision;
@@ -28,7 +28,7 @@ public class Factura extends EntreFechas implements Serializable {
         return fecha_emision;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
@@ -36,7 +36,7 @@ public class Factura extends EntreFechas implements Serializable {
         return tarifa;
     }
 
-    public Calendar [] getFecha_facturacion() {
+    public Calendar getFecha_facturacion() {
         return fecha_facturacion;
     }
 
@@ -44,7 +44,7 @@ public class Factura extends EntreFechas implements Serializable {
         return importe;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -56,7 +56,7 @@ public class Factura extends EntreFechas implements Serializable {
         this.fecha_emision = fecha_emision;
     }
 
-    public void setFecha_facturacion(Calendar [] fecha_facturacion) {
+    public void setFecha_facturacion(Calendar fecha_facturacion) {
         this.fecha_facturacion = fecha_facturacion;
     }
 
