@@ -24,7 +24,7 @@ public class Cartera extends EntreFechas implements Serializable {
     public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
     public static GeneradorDatosINE generador;
-    MetodosAyuda metodosAyuda;
+    static MetodosAyuda metodosAyuda;
     private Consola consola = new Consola();
 
     public Cartera() {
@@ -112,14 +112,14 @@ public class Cartera extends EntreFechas implements Serializable {
         System.out.println();
     }
 
-    public void cambiarTarifa() {
+    public static void cambiarTarifa() {
         String nif = metodosAyuda.getnif();
         System.out.print("Introduce la nueva tarifa: ");
         double tarifa = sc.nextDouble();
         Cartera.listaclientes.get(nif).tarifa.setEuromin(tarifa);
     }
 
-    public void borrarCliente() throws NonExistingClientException {
+    public static void borrarCliente() throws NonExistingClientException {
         MetodosAyuda getnif = new MetodosAyuda();
         String nif = getnif.getnif();
         if (!Cartera.listaclientes.containsKey(nif))
