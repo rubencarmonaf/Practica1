@@ -2,30 +2,31 @@ package Menu;
 
 import java.util.*;
 import Clientes.Cartera;
-import Facturas.ConjuntoFacturas;
 import Excepciones.ExistingBillException;
 import Excepciones.ExistingClientException;
 import Excepciones.InvalidAnswerException;
 import Excepciones.NonExistingClientException;
+import Facturas.ConjuntoFacturas;
 import Fechas.EntreFechas;
+import InterfazUsuario.Modelo.ImplementacionModelo;
 import Utilities.MetodosAyuda;
 
 public class Menu {
 
-    public static void main(String [ ] args) throws ExistingClientException, NonExistingClientException, ExistingBillException, InvalidAnswerException {
+    private static ImplementacionModelo gestion = new ImplementacionModelo();
+
+    public static void main(String [ ] args) throws NonExistingClientException, ExistingBillException, InvalidAnswerException {
+        gestion.cargarDatos();
         new Menu().ejecuta();
+        gestion.guardarDatos();
     }
 
-    private void ejecuta() throws ExistingClientException, NonExistingClientException, ExistingBillException, InvalidAnswerException {
+    private void ejecuta() throws NonExistingClientException {
         Scanner sc = new Scanner(System.in);
         Cartera cartera = new Cartera();
         MetodosAyuda metodosAyuda = new MetodosAyuda();
+        ConjuntoFacturas ConjuntoFacturas = new ConjuntoFacturas();
         OpcionMenu opcionMenu;
-        ConjuntoFacturas conjunto_facturas  = new ConjuntoFacturas();
-        Cartera cartera_clientes = new Cartera();
-        String load = MemoryCard.load();
-        cartera_clientes = MemoryCard.loading(cartera_clientes, load);
-        conjunto_facturas = MemoryCard.loading(conjunto_facturas, load);
         do {
             System.out.println(OpcionMenu.menu());
             System.out.print("Elige una opción: ");
@@ -56,13 +57,13 @@ public class Menu {
                     cartera.mostrarLlamadas();
                     break;
                 case NUEVA_FACTURA:
-                    ConjuntoFacturas.addFactura();
+                    ConjuntoFacturas.emitirFactura();
                     break;
                 case DATOS_FACTURA:
-                    ConjuntoFacturas.datosFactura();
+                    ConjuntoFacturas.recuperarDatosFactura();
                     break;
                 case MOSTRAR_FACTURA:
-                    ConjuntoFacturas.mostrarFactura();
+                    //ConjuntoFacturas.mostrarFactura();
                     break;
                 case BETWEEN_ALTA_CLIENTE:
                     EntreFechas.listadolista(cartera.between_alta_clientes(metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
@@ -76,7 +77,6 @@ public class Menu {
                     EntreFechas.listadolista(cartera.betweenfacturas(codigo2, metodosAyuda.mes_ini(), metodosAyuda.mes_fin()));
                     break;
                 case SALIR:
-                    MemoryCard.save(conjunto_facturas, cartera_clientes);
                     break;
             }
         } while(opcionMenu != OpcionMenu.SALIR);
