@@ -86,7 +86,7 @@ public class Cartera extends EntreFechas implements Serializable {
 
     public void darDeAltaLlamada() {
         System.out.print("Numero llamado: ");
-        String num_llamado = sc.nextLine();
+        int num_llamado = sc.nextInt();
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
         System.out.print("Introducir tiempo llamada: ");
         int tiempo_llamada = sc.nextInt();
