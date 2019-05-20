@@ -12,26 +12,27 @@ import Llamadas.Llamada;
 import Tarifas.Tarifa;
 
 public interface Modelo {
-    public boolean darDeAltaCliente(Cliente cliente) throws ExistingClientException;
-    public boolean borrarCliente(String nif) throws NonExistingClientException;
-    public boolean cambiarTarifa(String nif, Tarifa tarifa) throws NonExistingClientException ;
-    public Cliente recuperarDatosNIF(String nif) throws NonExistingClientException;
-    public HashMap<String, Cliente> recuperarListadoClientes() throws ListClientsNullExecption;
-    public Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListClientsNullExecption;
 
+    // Cliente
+    boolean darDeAltaCliente(Cliente cliente) throws ExistingClientException;
+    boolean borrarCliente(String nif) throws NonExistingClientException;
+    boolean cambiarTarifa(String nif, Tarifa tarifa) throws NonExistingClientException ;
+    Cliente recuperarDatosNIF(String nif) throws NonExistingClientException;
+    HashMap<String, Cliente> recuperarListadoClientes() throws ListClientsNullExecption;
+    Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListClientsNullExecption;
 
-    public boolean darDeAltaLlamada(String nif, Llamada llamada) throws NonExistingClientException ;
-    public List<Llamada> listarLlamadasCliente(String nif) throws NonExistingClientException ;
-    public Collection<Llamada> mostrarListadoLlamadasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws ListLlamadasNullExecption, IllegalPeriodException, NonExistingClientException;
+    // Llamadas
+    boolean darDeAltaLlamada(String nif, Llamada llamada) throws NonExistingClientException ;
+    List<Llamada> listarLlamadasCliente(String nif) throws NonExistingClientException ;
+    Collection<Llamada> mostrarListadoLlamadasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws ListLlamadasNullExecption, IllegalPeriodException, NonExistingClientException;
 
+    // Facturas
+    Factura emitirFactura(String nif, Calendar fechaFacturacion) throws NonExistingClientException;
+    Factura recuperarDatosFacturaCodigo(Integer codigo) throws NonExistingBillException;
+    List<Factura> recuperarFacturas(String nif) throws NonExistingClientException, ListLlamadasNullExecption ;
+    Collection<Factura> mostrarListadoFacturasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws NonExistingClientException, ListLlamadasNullExecption, IllegalPeriodException ;
 
-    public Factura emitirFactura(String nif, Calendar fechaFacturacion) throws NonExistingClientException;
-    public Factura recuperarDatosFacturaCodigo(Integer codigo) throws NonExistingBillException;
-    public List<Factura> recuperarFacturas(String nif) throws NonExistingClientException, ListLlamadasNullExecption ;
-    public Collection<Factura> mostrarListadoFacturasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws NonExistingClientException, ListLlamadasNullExecption, IllegalPeriodException ;
-
-
-    public void guardarDatos() ;
-    public void cargarDatos() ;
-
+    // Datos
+    void guardarDatos() ;
+    void cargarDatos() ;
 }

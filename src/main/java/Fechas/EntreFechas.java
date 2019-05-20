@@ -2,7 +2,6 @@ package Fechas;
 
 import Excepciones.IllegalPeriodException;
 
-import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -26,13 +25,5 @@ public class EntreFechas {
             }
         }
         return res;
-    }
-
-    public static <T extends EntreFechas> String listadolista(Collection<T> lista) {
-        StringBuilder listado = new StringBuilder();
-        listado.append("\n");
-        for (T dato : lista)
-            listado.append(dato.toString());
-        return listado.toString();
     }
 }
