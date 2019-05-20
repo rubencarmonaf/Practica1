@@ -34,7 +34,6 @@ public class ImplementacionModelo implements Modelo{
     }
 
 
-
     // OPERACIONES DEL CLIENTE
 
     public boolean darDeAltaCliente(Cliente cliente) throws ExistingClientException {
@@ -69,14 +68,14 @@ public class ImplementacionModelo implements Modelo{
         throw new NonExistingClientException();
     }
 
-    public HashMap<String, Cliente> recuperarListadoClientes() throws ListLlamadasNullExecption{
+    public HashMap<String, Cliente> recuperarListadoClientes() throws ListClientsNullExecption{
         if(this.clientes.isEmpty())
-            throw new ListLlamadasNullExecption();
+            throw new ListClientsNullExecption();
 
         return this.clientes;
     }
 
-    public Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListLlamadasNullExecption{
+    public Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListClientsNullExecption{
         if(fechaInicio.after(fechaFin))
             throw new IllegalPeriodException();
 
@@ -84,7 +83,7 @@ public class ImplementacionModelo implements Modelo{
         clientes = EntreFechas.listentrefechas(clientes, fechaInicio, fechaFin);
 
         if(clientes.isEmpty())
-            throw new ListLlamadasNullExecption();
+            throw new ListClientsNullExecption();
 
         return clientes;
     }

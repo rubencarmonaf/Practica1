@@ -17,8 +17,8 @@ public interface Controlador {
     public boolean borrarCliente(String nif) throws NonExistingClientException;
     public boolean cambiarTarifa(String nif, Tarifa tarifa) throws NonExistingClientException;
     public Cliente recuperarDatosCliente(String nif) throws NonExistingClientException;
-    public HashMap<String, Cliente> recuperaListadoClientes() throws ListLlamadasNullExecption;
-    public Collection<Cliente> recuperaListadoClientesEntreFechas(Calendar fechaInicio, Calendar fechaFin) throws ListLlamadasNullExecption, IllegalPeriodException;
+    public HashMap<String, Cliente> recuperaListadoClientes() throws ListClientsNullExecption;
+    public Collection<Cliente> recuperaListadoClientesEntreFechas(Calendar fechaInicio, Calendar fechaFin) throws ListClientsNullExecption, IllegalPeriodException;
     public boolean darDeAltaLlamada(String nif, Llamada llamada) throws NonExistingClientException;
     public List<Llamada> listarLlamadasCliente(String nif) throws NonExistingClientException;
     public Collection<Llamada> mostrarListadoLlamadasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws ListLlamadasNullExecption, IllegalPeriodException, NonExistingClientException;
@@ -26,8 +26,4 @@ public interface Controlador {
     public Factura recuperarDatosFacturaCodigo(Integer codigo) throws NonExistingBillException;
     public List<Factura> recuperarFacturas(String nif) throws NonExistingClientException, ListLlamadasNullExecption;
     public Collection<Factura> mostrarListadoFacturasFechas(String nif, Calendar fechaInicio, Calendar fechaFin) throws NonExistingClientException, ListLlamadasNullExecption, IllegalPeriodException;
-
-
-
-
 }

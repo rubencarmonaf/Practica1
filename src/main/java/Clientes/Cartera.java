@@ -9,7 +9,6 @@ import Fechas.EntreFechas;
 import Tarifas.Tarifa;
 import Tarifas.TarifaFactory;
 import Utilities.Consola;
-import Utilities.MetodosAyuda;
 import es.uji.www.GeneradorDatosINE;
 
 import java.io.Serializable;
@@ -24,7 +23,6 @@ public class Cartera extends EntreFechas implements Serializable {
     public static List<Cliente> auxlistaclientes;
     public static Scanner sc;
     public static GeneradorDatosINE generador;
-    static MetodosAyuda metodosAyuda;
     private Consola consola = new Consola();
 
     public Cartera() {
@@ -32,7 +30,6 @@ public class Cartera extends EntreFechas implements Serializable {
         auxlistaclientes = new ArrayList<>();
         sc = new Scanner(System.in);
         generador = new GeneradorDatosINE();
-        metodosAyuda = new MetodosAyuda();
     }
 
     public void darAltaCliente() {
@@ -99,7 +96,7 @@ public class Cartera extends EntreFechas implements Serializable {
     }
 
     public void mostrarLlamadas() {
-        String nif = metodosAyuda.getnif();
+        String nif = consola.pedirDato("Introduce NIF: ");
         for (Llamada llamada : Cartera.listaclientes.get(nif).mostrarllamadas()) {
             System.out.println(llamada.toString());
         }
@@ -107,21 +104,20 @@ public class Cartera extends EntreFechas implements Serializable {
     }
 
     public void datosCliente() {
-        String nif = metodosAyuda.getnif();
+        String nif = consola.pedirDato("Introduce NIF: ");
         System.out.println(Cartera.listaclientes.get(nif).toString());
         System.out.println();
     }
 
-    public static void cambiarTarifa() {
-        String nif = metodosAyuda.getnif();
+    public void cambiarTarifa() {
+        String nif = consola.pedirDato("Introduce NIF: ");
         System.out.print("Introduce la nueva tarifa: ");
         double tarifa = sc.nextDouble();
         Cartera.listaclientes.get(nif).tarifa.setEuromin(tarifa);
     }
 
-    public static void borrarCliente() throws NonExistingClientException {
-        MetodosAyuda getnif = new MetodosAyuda();
-        String nif = getnif.getnif();
+    public void borrarCliente() throws NonExistingClientException {
+        String nif = consola.pedirDato("Introduce NIF: ");
         if (!Cartera.listaclientes.containsKey(nif))
             throw new NonExistingClientException();
         Cartera.listaclientes.remove(nif);

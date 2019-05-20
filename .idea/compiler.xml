@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Agenda" />
         <module name="Practica1" />
+        <module name="ProgAvanzada" />
       </profile>
     </annotationProcessing>
   </component>

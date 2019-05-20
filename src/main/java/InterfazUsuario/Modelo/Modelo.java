@@ -16,8 +16,8 @@ public interface Modelo {
     public boolean borrarCliente(String nif) throws NonExistingClientException;
     public boolean cambiarTarifa(String nif, Tarifa tarifa) throws NonExistingClientException ;
     public Cliente recuperarDatosNIF(String nif) throws NonExistingClientException;
-    public HashMap<String, Cliente> recuperarListadoClientes() throws ListLlamadasNullExecption;
-    public Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListLlamadasNullExecption;
+    public HashMap<String, Cliente> recuperarListadoClientes() throws ListClientsNullExecption;
+    public Collection<Cliente> mostrarListadoClientesFechas(Calendar fechaInicio, Calendar fechaFin) throws IllegalPeriodException, ListClientsNullExecption;
 
 
     public boolean darDeAltaLlamada(String nif, Llamada llamada) throws NonExistingClientException ;

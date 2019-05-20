@@ -79,7 +79,7 @@ public class ImplementacionVista implements Vista {
     // GUI PRINCIPAL
 
     private void GUI() {
-        ventana = new JFrame("Empresa Telefónica");
+        ventana = new JFrame("Empresa de Telofonía");
         contenedor = ventana.getContentPane();
         EscuchadorPrincipal escuchador = new EscuchadorPrincipal();
         JPanel panelArriba = new JPanel();
@@ -1240,7 +1240,7 @@ public class ImplementacionVista implements Vista {
                     scroll.updateUI();
                     panelFinal.updateUI();
                     panelAbajo.updateUI();
-                } catch (ListLlamadasNullExecption e1) {
+                } catch (ListClientsNullExecption e1) {
                     JLabel clientesNoEncontrados = new JLabel("Clientes no encontrados");
                     panelFinal.add(clientesNoEncontrados);
                     panelAbajo.add(panelFinal);
@@ -1278,7 +1278,7 @@ public class ImplementacionVista implements Vista {
                     scroll.updateUI();
                     panelFinal.updateUI();
                     panelAbajo.updateUI();
-                } catch (ListLlamadasNullExecption e1) {
+                } catch (ListClientsNullExecption e1) {
                     JLabel clientesNoEncontrados = new JLabel("Clientes no encontrados");
                     panelFinal.add(clientesNoEncontrados);
                     panelAbajo.add(panelFinal);

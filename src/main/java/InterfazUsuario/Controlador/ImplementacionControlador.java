@@ -15,7 +15,7 @@ import Llamadas.Llamada;
 import Tarifas.Tarifa;
 
 
-public abstract class ImplementacionControlador implements Controlador{
+public class ImplementacionControlador implements Controlador{
 
     private Modelo modelo;
 
@@ -43,12 +43,12 @@ public abstract class ImplementacionControlador implements Controlador{
 
     }
 
-    public HashMap<String, Cliente> recuperarListadoClientes() throws ListLlamadasNullExecption {
+    public HashMap<String, Cliente> recuperaListadoClientes() throws ListClientsNullExecption {
         return modelo.recuperarListadoClientes();
 
     }
 
-    public Collection<Cliente> recuperarListadoClientesEntreFechas(Calendar fechaInicio, Calendar fechaFin) throws ListLlamadasNullExecption, IllegalPeriodException {
+    public Collection<Cliente> recuperaListadoClientesEntreFechas(Calendar fechaInicio, Calendar fechaFin) throws ListClientsNullExecption, IllegalPeriodException{
         return modelo.mostrarListadoClientesFechas(fechaInicio, fechaFin);
     }
 

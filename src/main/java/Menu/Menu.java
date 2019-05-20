@@ -3,25 +3,34 @@ package Menu;
 import java.util.*;
 import Clientes.Cartera;
 import Excepciones.ExistingBillException;
-import Excepciones.ExistingClientException;
 import Excepciones.InvalidAnswerException;
 import Excepciones.NonExistingClientException;
 import Facturas.ConjuntoFacturas;
 import Fechas.EntreFechas;
+import InterfazUsuario.Controlador.ImplementacionControlador;
 import InterfazUsuario.Modelo.ImplementacionModelo;
-import Utilities.MetodosAyuda;
+import InterfazUsuario.Vista.ImplementacionVista;
 
 public class Menu {
 
-    private static ImplementacionModelo gestion = new ImplementacionModelo();
+    //private ImplementacionModelo gestion = new ImplementacionModelo();
 
     public static void main(String [ ] args) throws NonExistingClientException, ExistingBillException, InvalidAnswerException {
-        gestion.cargarDatos();
+            ImplementacionControlador controlador = new ImplementacionControlador();
+            ImplementacionVista vista = new ImplementacionVista();
+            ImplementacionModelo modelo = new ImplementacionModelo();
+
+            controlador.setModelo(modelo);
+            vista.setModelo(modelo);
+            vista.setControlador(controlador);
+            modelo.cargarDatos();
+            vista.creaGUI();
+        /*gestion.cargarDatos();
         new Menu().ejecuta();
-        gestion.guardarDatos();
+        gestion.guardarDatos();*/
     }
 
-    private void ejecuta() throws NonExistingClientException {
+    /*private void ejecuta() throws NonExistingClientException {
         Scanner sc = new Scanner(System.in);
         Cartera cartera = new Cartera();
         MetodosAyuda metodosAyuda = new MetodosAyuda();
@@ -80,5 +89,5 @@ public class Menu {
                     break;
             }
         } while(opcionMenu != OpcionMenu.SALIR);
-    }
+    }*/
 }
