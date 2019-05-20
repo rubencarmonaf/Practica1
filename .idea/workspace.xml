@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c6e0ee-6ffd-4108-86a7-99885d5d7819" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/io/clientes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/io/desktop.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/io/facturas.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/io/facturasCodigo.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/io/llamadas.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cliente/ClienteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/factura/FacturaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/factura/LlamadaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tarifas/FactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tarifas/TarifasTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Clientes/Cliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Clientes/ClienteFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Clientes/Direccion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Clientes/Empresa.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Clientes/Particular.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/ExistingBillException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/ExistingClientException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/IllegalPeriodException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/InvalidAnswerException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/ListClientsNullExecption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/ListFacturasNullExecption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/ListLlamadasNullExecption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/NonExistingBillException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Excepciones/NonExistingClientException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Facturas/ConjuntoFacturas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Facturas/Factura.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Fechas/EntreFechas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Controlador/Controlador.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Controlador/ImplementacionControlador.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Modelo/ImplementacionModelo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Modelo/Modelo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorBorrarCliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorCambiarTarifa.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorCliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorDarAlta.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorDarAltaLlamada.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorEmitirFactura.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorFactura.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorLlamada.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorPrincipal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarCliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarFacturas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodasFacturas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodasFacturasEntreFechas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodasLlamadas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodasLlamadasEntreFechas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista$EscuchadorRecuperarTodosEntreFechas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/ImplementacionVista.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/InterfazUsuario/Vista/Vista.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Llamadas/Llamada.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Menu/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Menu/OpcionMenu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/ConTarifaDomingo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/ConTarifaTardes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/Tarifa.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/TarifaBasica.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/TarifaExtra.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Tarifas/TarifaFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Utilities/Consola.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Utilities/MetodosAyuda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fechas/EntreFechas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfazUsuario/Modelo/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -101,7 +34,7 @@
           <entry key="bin" value="1" />
           <entry key="class" value="2" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="231" />
+          <entry key="java" value="233" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
@@ -109,7 +42,7 @@
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="232" />
+          <entry key="JAVA" value="234" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="4" />
         </counts>
@@ -117,12 +50,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="24" />
-          <entry key="java" value="3219" />
+          <entry key="java" value="3259" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3219" />
+          <entry key="JAVA" value="3259" />
           <entry key="PLAIN_TEXT" value="24" />
         </counts>
       </usages-collector>
@@ -165,10 +98,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cliente/ClienteTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-673">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1853">
+              <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -234,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/ListFacturasNullExecption.java" />
         <option value="$PROJECT_DIR$/src/main/java/Excepciones/ListClientsNullExecption.java" />
         <option value="$PROJECT_DIR$/src/main/java/InterfazUsuario/Controlador/ImplementacionControlador.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java" />
         <option value="$PROJECT_DIR$/src/main/java/Facturas/ConjuntoFacturas.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/java/Clientes/Cartera.java" />
@@ -249,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Clientes/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/Clientes/Particular.java" />
         <option value="$PROJECT_DIR$/src/main/java/Clientes/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java" />
       </list>
     </option>
   </component>
@@ -309,6 +257,14 @@
               <item name="ProgAvanzada" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProgAvanzada" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Clientes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProgAvanzada" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProgAvanzada" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -354,7 +310,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558370645923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558370657948" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -467,6 +423,9 @@
     <history-entry file="All_in_ProgAvanzada - 2019.05.20 at 18h 39m 31s.xml">
       <configuration name="All in ProgAvanzada" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_ProgAvanzada - 2019.05.20 at 18h 42m 49s.xml">
+      <configuration name="All in ProgAvanzada" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="21892000" />
@@ -475,7 +434,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15191898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15191898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -489,7 +448,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3275488" />
@@ -805,16 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/ConTarifaTardes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -869,16 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tarifas/ConTarifaDomingo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -911,8 +850,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cliente/ClienteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-673">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="-299">
+          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Clientes/Cartera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/MetodosAyuda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

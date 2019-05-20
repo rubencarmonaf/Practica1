@@ -2,10 +2,12 @@ package Utilities;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
-import static Clientes.Cartera.sc;
 
 public class MetodosAyuda {
+
+    Scanner sc = new Scanner(System.in);
 
     public String getnif(){
         System.out.print("Introduce el NIF del cliente: ");
