@@ -23,11 +23,11 @@ public class ConjuntoFacturas extends EntreFechas implements Serializable {
     public void emitirFactura() {
         String nif = consola.pedirDato("Introduce NIF: ");
         consola.mostrarDato("Introduce fecha: \n");
-        int año = Integer.parseInt(consola.pedirDato("	-Año: "));
+        int ano = Integer.parseInt(consola.pedirDato("	-Año: "));
         int mes = Integer.parseInt(consola.pedirDato("	-Mes (numérico): "));
         int dia = Integer.parseInt(consola.pedirDato("	-Día: "));
         Calendar fecha = Calendar.getInstance();
-        fecha.set(año, mes, dia);
+        fecha.set(ano, mes, dia);
         try {
             gestion.emitirFactura(nif, fecha);
             consola.mostrarDato("\nFactura realizada \n\n");

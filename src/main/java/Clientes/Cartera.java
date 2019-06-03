@@ -87,7 +87,7 @@ public class Cartera extends EntreFechas implements Serializable {
         Calendar fecha = Calendar.getInstance(Locale.getDefault());
         System.out.print("Introducir tiempo llamada: ");
         int tiempo_llamada = sc.nextInt();
-        Llamada llamada = new Llamada(num_llamado, fecha, fecha.getTime(), tiempo_llamada);
+        Llamada llamada = new Llamada(num_llamado, fecha, tiempo_llamada);
         sc.nextLine();
         System.out.print("Cliente que ha realizado la llamada (Introducir NIF): ");
         String nif_cliente = sc.nextLine();

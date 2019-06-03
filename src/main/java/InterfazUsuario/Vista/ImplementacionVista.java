@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Locale;
@@ -51,11 +50,11 @@ public class ImplementacionVista implements Vista {
     JTextField correo = null;
     JTextField dia = null;
     JTextField mes = null;
-    JTextField año = null;
+    JTextField ano = null;
     JTextField tarifa = null;
     JTextField dia2 = null;
     JTextField mes2 = null;
-    JTextField año2 = null;
+    JTextField ano2 = null;
     JTextField telf = null;
     JTextField codFac = null;
     JTextField hora = null;
@@ -77,7 +76,6 @@ public class ImplementacionVista implements Vista {
     }
 
     // GUI PRINCIPAL
-
     private void GUI() {
         ventana = new JFrame("Empresa de Telofonía");
         contenedor = ventana.getContentPane();
@@ -97,14 +95,12 @@ public class ImplementacionVista implements Vista {
         panelCentral.setAlignmentX(JComponent.CENTER_ALIGNMENT);
         panelArriba.setPreferredSize(new Dimension(1080, 40));
         contenedor.add(panelCentral, BorderLayout.CENTER);
-        ventana.setSize(1280, 400);
+        ventana.setSize(1150, 500);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setVisible(true);
-
     }
 
     // GUI MENU
-
     private void GUICliente() {
         JPanel menu = new JPanel();
         panelCentral.removeAll();
@@ -211,7 +207,6 @@ public class ImplementacionVista implements Vista {
     }
 
     // GUI CLIENTE
-
     private void GUIDarAlta() {
         panelAbajo.removeAll();
 
@@ -220,17 +215,14 @@ public class ImplementacionVista implements Vista {
         JRadioButton si = new JRadioButton("si");
         JRadioButton no = new JRadioButton("no");
         si.setActionCommand("si");
-        si.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                switch (e.getStateChange()) {
-                    case ItemEvent.SELECTED:
-                        tipo = 0;
-                        break;
-                    case ItemEvent.DESELECTED:
-                        tipo = 1;
-                        break;
-                }
+        si.addItemListener(e -> {
+            switch (e.getStateChange()) {
+                case ItemEvent.SELECTED:
+                    tipo = 0;
+                    break;
+                case ItemEvent.DESELECTED:
+                    tipo = 1;
+                    break;
             }
         });
         panelEmpresa.add(new JLabel("¿Eres una empresa?"));
@@ -294,16 +286,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelCorreo);
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         JLabel fechaLabel = new JLabel("Fecha de alta: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -526,16 +518,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.removeAll();
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         JLabel fechaLabel = new JLabel("Fecha de inicio: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -544,16 +536,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelFecha);
 
         JPanel panelFecha2 = new JPanel();
-        año2 = new JTextField(4);
+        ano2 = new JTextField(4);
         mes2 = new JTextField(2);
         dia2 = new JTextField(2);
         JLabel fechaLabel2 = new JLabel("Fecha de fin: ");
-        JLabel añoLabel2 = new JLabel("Año: ");
+        JLabel anoLabel2 = new JLabel("Año: ");
         JLabel mesLabel2 = new JLabel("Mes(numérico): ");
         JLabel diaLabel2 = new JLabel("Día: ");
         panelFecha2.add(fechaLabel2);
-        panelFecha2.add(añoLabel2);
-        panelFecha2.add(año2);
+        panelFecha2.add(anoLabel2);
+        panelFecha2.add(ano2);
         panelFecha2.add(mesLabel2);
         panelFecha2.add(mes2);
         panelFecha2.add(diaLabel2);
@@ -614,20 +606,20 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelTelf);
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         hora = new JTextField(6);
         minuto = new JTextField(6);
         JLabel fechaLabel = new JLabel("Fecha de alta: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         JLabel horaLabel = new JLabel("Hora: ");
         JLabel minutoLabel = new JLabel("Minuto: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -734,16 +726,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelNif);
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         JLabel fechaLabel = new JLabel("Fecha de inicio: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -752,16 +744,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelFecha);
 
         JPanel panelFecha2 = new JPanel();
-        año2 = new JTextField(4);
+        ano2 = new JTextField(4);
         mes2 = new JTextField(2);
         dia2 = new JTextField(2);
         JLabel fechaLabel2 = new JLabel("Fecha de fin: ");
-        JLabel añoLabel2 = new JLabel("Año: ");
+        JLabel anoLabel2 = new JLabel("Año: ");
         JLabel mesLabel2 = new JLabel("Mes(numérico): ");
         JLabel diaLabel2 = new JLabel("Día: ");
         panelFecha2.add(fechaLabel2);
-        panelFecha2.add(añoLabel2);
-        panelFecha2.add(año2);
+        panelFecha2.add(anoLabel2);
+        panelFecha2.add(ano2);
         panelFecha2.add(mesLabel2);
         panelFecha2.add(mes2);
         panelFecha2.add(diaLabel2);
@@ -815,16 +807,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelNif);
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         JLabel fechaLabel = new JLabel("Fecha: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -958,16 +950,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelNif);
 
         JPanel panelFecha = new JPanel();
-        año = new JTextField(4);
+        ano = new JTextField(4);
         mes = new JTextField(2);
         dia = new JTextField(2);
         JLabel fechaLabel = new JLabel("Fecha de inicio: ");
-        JLabel añoLabel = new JLabel("Año: ");
+        JLabel anoLabel = new JLabel("Año: ");
         JLabel mesLabel = new JLabel("Mes(numérico): ");
         JLabel diaLabel = new JLabel("Día: ");
         panelFecha.add(fechaLabel);
-        panelFecha.add(añoLabel);
-        panelFecha.add(año);
+        panelFecha.add(anoLabel);
+        panelFecha.add(ano);
         panelFecha.add(mesLabel);
         panelFecha.add(mes);
         panelFecha.add(diaLabel);
@@ -976,16 +968,16 @@ public class ImplementacionVista implements Vista {
         panelAbajo.add(panelFecha);
 
         JPanel panelFecha2 = new JPanel();
-        año2 = new JTextField(4);
+        ano2 = new JTextField(4);
         mes2 = new JTextField(2);
         dia2 = new JTextField(2);
         JLabel fechaLabel2 = new JLabel("Fecha de fin: ");
-        JLabel añoLabel2 = new JLabel("Año: ");
+        JLabel anoLabel2 = new JLabel("Año: ");
         JLabel mesLabel2 = new JLabel("Mes(numérico): ");
         JLabel diaLabel2 = new JLabel("Día: ");
         panelFecha2.add(fechaLabel2);
-        panelFecha2.add(añoLabel2);
-        panelFecha2.add(año2);
+        panelFecha2.add(anoLabel2);
+        panelFecha2.add(ano2);
         panelFecha2.add(mesLabel2);
         panelFecha2.add(mes2);
         panelFecha2.add(diaLabel2);
@@ -1105,10 +1097,10 @@ public class ImplementacionVista implements Vista {
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 Calendar fecha = Calendar.getInstance();
-                int añoLocal = Integer.parseInt(año.getText().trim());
+                int anoLocal = Integer.parseInt(ano.getText().trim());
                 int mesLocal = Integer.parseInt(mes.getText().trim());
                 int diaLocal = Integer.parseInt(dia.getText().trim());
-                fecha.set(añoLocal, mesLocal, diaLocal);
+                fecha.set(anoLocal, mesLocal, diaLocal);
                 int codPosLocal = Integer.parseInt(codPos.getText().trim());
                 Direccion dir = new Direccion(codPosLocal, prov.getText(), pob.getText());
                 Tarifa tarifaLocal = null;
@@ -1214,15 +1206,15 @@ public class ImplementacionVista implements Vista {
             submit = (JButton) e.getSource();
             String texto = submit.getText();
             Calendar fechaInicio = Calendar.getInstance();
-            int añoLocal = Integer.parseInt(año.getText().trim());
+            int anoLocal = Integer.parseInt(ano.getText().trim());
             int mesLocal = Integer.parseInt(mes.getText().trim());
             int diaLocal = Integer.parseInt(dia.getText().trim());
-            fechaInicio.set(añoLocal, mesLocal, diaLocal);
+            fechaInicio.set(anoLocal, mesLocal, diaLocal);
             Calendar fechaFin = Calendar.getInstance();
-            int añoLocal2 = Integer.parseInt(año2.getText().trim());
+            int anoLocal2 = Integer.parseInt(ano2.getText().trim());
             int mesLocal2 = Integer.parseInt(mes2.getText().trim());
             int diaLocal2 = Integer.parseInt(dia2.getText().trim());
-            fechaFin.set(añoLocal2, mesLocal2, diaLocal2);
+            fechaFin.set(anoLocal2, mesLocal2, diaLocal2);
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 try {
@@ -1296,17 +1288,16 @@ public class ImplementacionVista implements Vista {
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 Calendar fecha_llamada = Calendar.getInstance();
-                int añoLocal = Integer.parseInt(año.getText().trim());
+                int anoLocal = Integer.parseInt(ano.getText().trim());
                 int mesLocal = Integer.parseInt(mes.getText().trim());
                 int diaLocal = Integer.parseInt(dia.getText().trim());
                 int horaLocal = Integer.parseInt(hora.getText().trim());
                 int minLocal = Integer.parseInt(minuto.getText().trim());
-                fecha_llamada.set(añoLocal, mesLocal, diaLocal, horaLocal, minLocal);
+                fecha_llamada.set(anoLocal, mesLocal, diaLocal, horaLocal, minLocal);
                 int telefono = Integer.parseInt(telf.getText().trim());
                 int dura = Integer.parseInt(dur.getText().trim());
 
-                Calendar hora_llamada = Calendar.getInstance(Locale.getDefault());
-                Llamada llamada = new Llamada(telefono, fecha_llamada, hora_llamada.getTime(), dura);
+                Llamada llamada = new Llamada(telefono, fecha_llamada, dura);
                 try {
                     controlador.darDeAltaLlamada(nif.getText(), llamada);
                     modelo.guardarDatos();
@@ -1364,15 +1355,15 @@ public class ImplementacionVista implements Vista {
             submit = (JButton) e.getSource();
             String texto = submit.getText();
             Calendar fechaInicio = Calendar.getInstance();
-            int añoLocal = Integer.parseInt(año.getText().trim());
+            int anoLocal = Integer.parseInt(ano.getText().trim());
             int mesLocal = Integer.parseInt(mes.getText().trim());
             int diaLocal = Integer.parseInt(dia.getText().trim());
-            fechaInicio.set(añoLocal, mesLocal, diaLocal);
+            fechaInicio.set(anoLocal, mesLocal, diaLocal);
             Calendar fechaFin = Calendar.getInstance();
-            int añoLocal2 = Integer.parseInt(año2.getText().trim());
+            int anoLocal2 = Integer.parseInt(ano2.getText().trim());
             int mesLocal2 = Integer.parseInt(mes2.getText().trim());
             int diaLocal2 = Integer.parseInt(dia2.getText().trim());
-            fechaFin.set(añoLocal2, mesLocal2, diaLocal2);
+            fechaFin.set(anoLocal2, mesLocal2, diaLocal2);
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 try {
@@ -1420,10 +1411,10 @@ public class ImplementacionVista implements Vista {
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 Calendar fecha = Calendar.getInstance();
-                int añoLocal = Integer.parseInt(año.getText().trim());
+                int anoLocal = Integer.parseInt(ano.getText().trim());
                 int mesLocal = Integer.parseInt(mes.getText().trim());
                 int diaLocal = Integer.parseInt(dia.getText().trim());
-                fecha.set(añoLocal, mesLocal, diaLocal);
+                fecha.set(anoLocal, mesLocal, diaLocal);
 
                 try {
                     controlador.emitirFactura(nif.getText(), fecha);
@@ -1514,15 +1505,15 @@ public class ImplementacionVista implements Vista {
             submit = (JButton) e.getSource();
             String texto = submit.getText();
             Calendar fechaInicio = Calendar.getInstance();
-            int añoLocal = Integer.parseInt(año.getText().trim());
+            int anoLocal = Integer.parseInt(ano.getText().trim());
             int mesLocal = Integer.parseInt(mes.getText().trim());
             int diaLocal = Integer.parseInt(dia.getText().trim());
-            fechaInicio.set(añoLocal, mesLocal, diaLocal);
+            fechaInicio.set(anoLocal, mesLocal, diaLocal);
             Calendar fechaFin = Calendar.getInstance();
-            int añoLocal2 = Integer.parseInt(año2.getText().trim());
+            int anoLocal2 = Integer.parseInt(ano2.getText().trim());
             int mesLocal2 = Integer.parseInt(mes2.getText().trim());
             int diaLocal2 = Integer.parseInt(dia2.getText().trim());
-            fechaFin.set(añoLocal2, mesLocal2, diaLocal2);
+            fechaFin.set(anoLocal2, mesLocal2, diaLocal2);
             if (texto.equals("Enviar")) {
                 panelFinal.removeAll();
                 try {

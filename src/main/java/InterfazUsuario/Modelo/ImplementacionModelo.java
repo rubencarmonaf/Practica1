@@ -141,7 +141,7 @@ public class ImplementacionModelo implements Modelo{
 
         double importe = (tarifa.getEuromin() / 60) * duracionLlamadas;
 
-        Factura factura = new Factura(codigo, tarifa, fechaEmision, fechaFacturacion,importe);
+        Factura factura = new Factura(codigo, tarifa, fechaEmision,importe);
 
         if (this.facturas.get(nif) == null)
             this.facturas.put(nif, new ArrayList<Factura>());

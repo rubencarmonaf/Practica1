@@ -10,27 +10,21 @@ public class Llamada extends EntreFechas implements Serializable {
 
     private static final long serialVersionUID = -3233202990795471243L;
     private int numero_llamado;
-    private Calendar fecha_llamada;
-    private Date hora_llamada;
+    private Calendar fecha;
     private int duracion_llamada;
 
-    public Llamada(int numero_llamado, Calendar fecha_llamada, Date hora_llamada, int duracion_llamada) {
+    public Llamada(int numero_llamado, Calendar fecha, int duracion_llamada) {
         this.numero_llamado = numero_llamado;
-        this.fecha_llamada = fecha_llamada;
-        this.hora_llamada = hora_llamada;
+        this.fecha = fecha;
         this.duracion_llamada = duracion_llamada;
     }
 
     public Calendar getFecha() {
-        return fecha_llamada;
+        return fecha;
     }
 
     public int getNumero_llamado() {
         return numero_llamado;
-    }
-
-    public Date getHora_llamada() {
-        return hora_llamada;
     }
 
     public double getDuracion_llamada() {
@@ -42,11 +36,7 @@ public class Llamada extends EntreFechas implements Serializable {
     }
 
     public void setFecha_llamada(Calendar fecha_llamada) {
-        this.fecha_llamada = fecha_llamada;
-    }
-
-    public void setHora_llamada(Date hora_llamada) {
-        this.hora_llamada = hora_llamada;
+        this.fecha = fecha_llamada;
     }
 
     public void setDuracion_llamada(int duracion_llamada) {
@@ -57,8 +47,7 @@ public class Llamada extends EntreFechas implements Serializable {
     public String toString() {
         return "Llamadas.Llamada{" +
                 "numero_llamado='" + numero_llamado + '\'' +
-                ", fecha_llamada=" + fecha_llamada +
-                ", hora_llamada='" + hora_llamada + '\'' +
+                ", fecha_llamada=" + fecha +
                 ", duracion_llamada=" + duracion_llamada +
                 '}';
     }

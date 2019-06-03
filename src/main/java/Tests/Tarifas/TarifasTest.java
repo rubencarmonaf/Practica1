@@ -1,4 +1,4 @@
-package tarifas;
+package Tests.Tarifas;
 
 import static org.junit.Assert.*;
 
@@ -8,10 +8,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import factura.ConTarifaDomingo;
-import factura.ConTarifaTardes;
-import factura.Llamada;
-import factura.TarifaBasica;
+import Tarifas.ConTarifaDomingo;
+import Tarifas.ConTarifaTardes;
+import Llamadas.Llamada;
+import Tarifas.TarifaBasica;
 
 public class TarifasTest {
 
@@ -48,13 +48,7 @@ public class TarifasTest {
 		public void testCalcularImporte() {
 	        tarifa = new ConTarifaDomingo(tarifa, 0);
 	        assertEquals(0,tarifa.calcularImporte(llamada), -1);
-
-	 
-
-
-	        
 	        tarifa = new ConTarifaTardes(tarifa,5);
-	       
 	        assertEquals(3000,tarifa.calcularImporte(llamada2),-1);
 
 

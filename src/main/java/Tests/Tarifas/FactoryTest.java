@@ -1,4 +1,4 @@
-package tarifas;
+package Tests.Tarifas;
 
 import static org.junit.Assert.*;
 
@@ -8,14 +8,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import cliente.ClienteFactory;
-import cliente.Direccion;
-import cliente.Empresa;
-import cliente.Particular;
-import factura.ConTarifaDomingo;
-import factura.ConTarifaTardes;
-import factura.TarifaBasica;
-import factura.TarifaFactory;
+import Clientes.ClienteFactory;
+import Clientes.Direccion;
+import Clientes.Empresa;
+import Clientes.Particular;
+import Tarifas.ConTarifaDomingo;
+import Tarifas.ConTarifaTardes;
+import Tarifas.TarifaBasica;
+import Tarifas.TarifaFactory;
 
 
 public class FactoryTest {
@@ -33,51 +33,51 @@ public class FactoryTest {
 	private Calendar fecha = Calendar.getInstance();
 	private String apellidos = "Tenas";
 
-	
+
 	@Before
 	public void init() {
 		empresa = new Empresa(nombre, nif, dir, correo, fecha, tarifa);
 		particular = new Particular(nombre, apellidos, nif, dir, correo, fecha, tarifa);
-		
+
 	}
-	
+
 	@After
 	public void finish() {
 		empresa = null;
-		particular = null; 
+		particular = null;
 		tarifa=null;
 	}
 
 	@Test
 	public void testCliente() {
         Empresa empresa2 = (Empresa) ClienteFactory.crearCliente(0, nombre, apellidos, nif, dir, correo, fecha, tarifa);
-        assertEquals(empresa.getNombre(),empresa2.getNombre());
-        assertEquals(empresa.getCorreo(),empresa2.getCorreo());
-        assertEquals(empresa.getNIF(),empresa2.getNIF());
-        
+        assertEquals(empresa.getNombre(), empresa2.getNombre());
+        assertEquals(empresa.getCorreo_electronico(), empresa2.getCorreo_electronico());
+        assertEquals(empresa.getNIF(), empresa2.getNIF());
+
         Particular particular2 = (Particular) ClienteFactory.crearCliente(1, nombre, apellidos, nif, dir, correo, fecha, tarifa);
-        assertEquals(particular.getNombre(),particular2.getNombre());
-        assertEquals(particular.getApellidos(),particular2.getApellidos());
-        assertEquals(particular.getCorreo(),particular2.getCorreo());
+        assertEquals(particular.getNombre(), particular2.getNombre());
+        assertEquals(particular.getApellidos(), particular2.getApellidos());
+        assertEquals(particular.getCorreo_electronico(), particular2.getCorreo_electronico());
 
 	}
 
-	
+
 	@Test
 	public void testTarifa() {
 		TarifaBasica tarifaB = null;
         tarifaB= (TarifaBasica) TarifaFactory.crearTarifa(0, tarifaB, 5);
-        assertEquals(tarifa.getImporte(),tarifaB.getImporte(), -1);
-        
+        assertEquals(tarifa.getEuromin(),tarifaB.getEuromin(), -1);
+
         ConTarifaDomingo tarifaD = (ConTarifaDomingo) TarifaFactory.crearTarifa(1, tarifaB, 2);
         tarifa = new ConTarifaDomingo(tarifa, 2);
-        assertEquals(tarifa.getImporte(),tarifaD.getImporte(), -1);
-        
+        assertEquals(tarifa.getEuromin(),tarifaD.getEuromin(), -1);
+
         ConTarifaTardes tarifaT = (ConTarifaTardes) TarifaFactory.crearTarifa(2, tarifaB, 3);
         tarifa = new ConTarifaTardes(tarifa, 3);
-        assertEquals(tarifa.getImporte(),tarifaT.getImporte(), -1);
-        
+        assertEquals(tarifa.getEuromin(),tarifaT.getEuromin(), -1);
+
 	}
-	
-	
+
+
 }
